@@ -71,7 +71,7 @@
                                 <a href="allowance"><i class="fa fa-coffee"></i>Allowance Type</a>
                             </li>
                             <li>
-                                <a href="<?php echo site_url('deduction');?>"><i class="fa fa-flash "></i>Deduction Type</a>
+                                <a href="deduction"><i class="fa fa-flash "></i>Deduction Type</a>
                             </li>
                              <li>
                                 <a href="annualLeave"><i class="fa fa-key "></i>Annual Leave</a>
