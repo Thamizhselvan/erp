@@ -1,0 +1,34 @@
+[30-Oct-2017 06:23:14 UTC] PHP Fatal error:  Call to a member function generateEmployeeId() on null in /home/srmedu1/public_html/erp/application/controllers/EmployeeImpl.php on line 58
+[30-Oct-2017 17:16:54 UTC] PHP Fatal error:  Call to a member function generateEmployeeId() on null in /home/srmedu1/public_html/erp/application/controllers/EmployeeImpl.php on line 58
+[31-Oct-2017 18:30:15 UTC] PHP Fatal error:  Call to a member function generateEmployeeId() on null in /home/srmedu1/public_html/erp/application/controllers/EmployeeImpl.php on line 58
+[31-Oct-2017 18:31:22 UTC] PHP Fatal error:  Call to a member function generateEmployeeId() on null in /home/srmedu1/public_html/erp/application/controllers/EmployeeImpl.php on line 58
+[31-Oct-2017 18:31:22 UTC] PHP Fatal error:  Call to a member function generateEmployeeId() on null in /home/srmedu1/public_html/erp/application/controllers/EmployeeImpl.php on line 58
+[09-Nov-2017 17:33:49 UTC] PHP Parse error:  syntax error, unexpected '++' (T_INC), expecting variable (T_VARIABLE) or '$' in /home/srmedu1/public_html/erp/application/views/addFees.php on line 44
+[09-Nov-2017 17:34:29 UTC] PHP Parse error:  syntax error, unexpected '++' (T_INC), expecting variable (T_VARIABLE) or '$' in /home/srmedu1/public_html/erp/application/views/addFees.php on line 44
+[09-Nov-2017 17:53:36 UTC] PHP Fatal error:  Call to undefined function side_url() in /home/srmedu1/public_html/erp/application/views/addFees.php on line 9
+[09-Nov-2017 18:24:34 UTC] PHP Fatal error:  Call to undefined method FeesDAO::currentDate() in /home/srmedu1/public_html/erp/application/models/FeesDAO.php on line 94
+[09-Nov-2017 18:25:51 UTC] PHP Fatal error:  Call to undefined method FeesDAO::currentDate() in /home/srmedu1/public_html/erp/application/models/FeesDAO.php on line 94
+[10-Nov-2017 09:09:19 UTC] PHP Fatal error:  Call to undefined method EmployeeDAO::getAllEmployees() in /home/srmedu1/public_html/erp/application/controllers/EmployeeImpl.php on line 27
+[10-Nov-2017 09:20:19 UTC] PHP Fatal error:  Call to undefined method EmployeeDAO::getAllEmployees() in /home/srmedu1/public_html/erp/application/controllers/EmployeeImpl.php on line 27
+[11-Nov-2017 04:33:28 UTC] PHP Fatal error:  Call to undefined method EmployeeDAO::getAllEmployees() in /home/srmedu1/public_html/erp/application/controllers/EmployeeImpl.php on line 27
+[11-Nov-2017 16:04:00 UTC] PHP Fatal error:  Call to undefined method EmployeeDAO::getAllEmployees() in /home/srmedu1/public_html/erp/application/controllers/EmployeeImpl.php on line 27
+[13-Nov-2017 18:00:34 UTC] PHP Fatal error:  Call to undefined method FeesDAO::setEducationDetails() in /home/srmedu1/public_html/erp/application/controllers/FeesImpl.php on line 59
+[16-Nov-2017 14:58:09 UTC] PHP Fatal error:  Call to undefined method EmployeeDAO::employeeDelete() in /home/srmedu1/public_html/erp/application/controllers/EmployeeImpl.php on line 62
+[16-Nov-2017 17:53:42 UTC] PHP Fatal error:  Call to a member function getFessById() on null in /home/srmedu1/public_html/erp/application/controllers/FeesImpl.php on line 17
+[16-Nov-2017 17:54:03 UTC] PHP Fatal error:  Call to a member function getFessById() on null in /home/srmedu1/public_html/erp/application/controllers/FeesImpl.php on line 17
+[16-Nov-2017 17:54:58 UTC] PHP Fatal error:  Call to a member function getFessById() on null in /home/srmedu1/public_html/erp/application/controllers/FeesImpl.php on line 17
+[16-Nov-2017 18:15:16 UTC] PHP Parse error:  syntax error, unexpected 'as' (T_AS) in /home/srmedu1/public_html/erp/application/models/FeesDAO.php on line 212
+[16-Nov-2017 18:41:15 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/srmedu1/public_html/erp/application/models/FeesDAO.php on line 204
+[16-Nov-2017 18:41:51 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/srmedu1/public_html/erp/application/models/FeesDAO.php on line 204
+[16-Nov-2017 18:59:51 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/srmedu1/public_html/erp/application/controllers/FeesImpl.php on line 18
+[16-Nov-2017 19:18:12 UTC] PHP Parse error:  syntax error, unexpected 'value' (T_STRING) in /home/srmedu1/public_html/erp/application/views/addFees.php on line 14
+[16-Nov-2017 19:38:56 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/srmedu1/public_html/erp/application/views/addFees.php on line 16
+[16-Nov-2017 19:39:24 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/srmedu1/public_html/erp/application/views/addFees.php on line 16
+[16-Nov-2017 19:39:47 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/srmedu1/public_html/erp/application/views/addFees.php on line 16
+[20-Nov-2017 16:34:46 UTC] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home/srmedu1/public_html/erp/application/controllers/FeesImpl.php on line 54
+[23-Nov-2017 18:20:04 UTC] PHP Fatal error:  Call to a member function getMessage() on null in /home/srmedu1/public_html/erp/application/controllers/FeesImpl.php on line 144
+[23-Nov-2017 18:21:12 UTC] PHP Fatal error:  Call to a member function getMessage() on null in /home/srmedu1/public_html/erp/application/controllers/FeesImpl.php on line 144
+[23-Nov-2017 18:26:20 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/srmedu1/public_html/erp/application/models/FeesDAO.php on line 223
+[23-Nov-2017 18:31:31 UTC] PHP Parse error:  syntax error, unexpected 'fasdF' (T_STRING), expecting ',' or ';' in /home/srmedu1/public_html/erp/application/models/FeesDAO.php on line 217
+[02-Dec-2017 17:03:25 UTC] PHP Fatal error:  Call to undefined method PayrollDAO::getAllAllowance() in /home/srmedu1/public_html/erp/application/controllers/PayrollImpl.php on line 123
+[02-Dec-2017 17:07:59 UTC] PHP Fatal error:  Call to undefined method PayrollDAO::getAllAllowance() in /home/srmedu1/public_html/erp/application/controllers/PayrollImpl.php on line 123
