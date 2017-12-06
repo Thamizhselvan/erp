@@ -1,7 +1,7 @@
 function salaryslip(){
-	
+	alert('calleddss');
 	var dcode=$('#dcode').val();
-	var role=$('#role').val();
+	var role=$('#roleId').val();
 	var empId=$('#empId').val();
 	var month=$('#month').val();
 	var year=$('#year').val();
@@ -19,22 +19,24 @@ function salaryslip(){
 				var data = $.parseJSON(data);
 				var allowanceTotal=0;
 				var deductionTotal=0;
-				$('#allowance').append('<tr><th>Allowance</td><td></td></tr>');
+				var count=1;
+				$('#mytable').append('<tr><td></td><th>Allowance</td><td></td></tr>');
 				$.each(data.allowanceList, function (allowanceType, val) {
-					//console.log('allowanceType===>'+allowanceType+':Val===>'+val);
-					$('#allowance').append('<tr><td>'+allowanceType+'</td><td>'+val+'</td></tr>');
+					
+					$('#mytable').append('<tr><td>'+count+'</td><td>'+allowanceType+'</td><td>'+val+'</td></tr>');
 					allowanceTotal=parseFloat(allowanceTotal)+parseFloat(val);
+					count++;
 				});
-				$('#allowance').append('<tr><th>Allowance Total: </td><td>'+allowanceTotal+'</td></tr>');
-				$('#allowance').append('<tr><th>Deduction</td><td></td></tr>');
+				$('#mytable').append('<tr><td></td><th>Allowance Total: </td><td>'+allowanceTotal+'</td></tr>');
+				$('#mytable').append('<tr><td></td><th>Deduction</td><td></td></tr>');
 				$.each(data.deductionList, function (deductionType, val) {
-					//console.log('deductionType===>'+deductionType+':Val===>'+val);
-					$('#allowance').append('<tr><td>'+deductionType+'</td><td>'+val+'</td></tr>');
+					$('#mytable').append('<tr><td>'+count+'</td><td>'+deductionType+'</td><td>'+val+'</td></tr>');
 					deductionTotal=parseFloat(deductionTotal)+parseFloat(val);
+					count++;
 				});
 				var netSalary = parseFloat(allowanceTotal) - parseFloat(deductionTotal);
-				$('#allowance').append('<tr><th>Deduction Total: </td><td>'+deductionTotal+'</td></tr>');
-				$('#allowance').append('<tr><th>Net Salary: </td><td>'+netSalary+'</td></tr>');
+				$('#mytable').append('<tr><td></td><th>Deduction Total: </td><td>'+deductionTotal+'</td></tr>');
+				$('#mytable').append('<tr><td></td><th>Net Salary: </td><td>'+netSalary+'</td></tr>');
 		}
 	})
 }
