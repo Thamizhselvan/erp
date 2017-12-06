@@ -9,18 +9,19 @@
       }
 	  public function getWorkingDays($year, $month, $ignore) {
 		$count = 0;
-		$counter = mktime(0, 0, 0, $month, 1, $year);
+		/*$counter = mktime(0, 0, 0, $month, 1, $year);
 		while (date("n", $counter) == $month) {
 			if (in_array(date("w", $counter), $ignore) == false) {
 				$count++;
 			}
 			$counter = strtotime("+1 day", $counter);
-		}
-		return $count;
+		}*/
+		return 30;
 	  }
 	  function getAllowance($dcode, $role, $academicYear){
 		$query = $this->db->query("SELECT allowance_type, amount FROM tbl_allowance where academic_year=".$this->db->escape($academicYear)."
 			and dcode=".$this->db->escape($dcode)." and role_id=".$this->db->escape($role)." ");
+			
 		$resultArr=array();
 		foreach ($query->result_array() as $row)
 		{

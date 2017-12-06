@@ -3,36 +3,35 @@
 	
       Public function __construct() { 
          parent::__construct(); 
-		 //$this->load->database();
-		 //$this->load->helper('url');
 		 
       }
 	  public function saveAllowance(){
 	    
 		$dcode=$this->input->post('dcode'); 
-	    $role=$this->input->post('role'); 
+	    $roleId=$this->input->post('roleId'); 
 		$allowanceType=$this->input->post('allowanceType'); 
 		$amount=$this->input->post('amount'); 
 		$academicYear=$this->input->post('academicYear');  
 		$USER_ID = "SYSTEM";
 	    
-	    $sql = "INSERT INTO tbl_allowance(dcode,role,allowance_type,amount,academic_year) 
-				VALUES ( ".$this->db->escape($dcode).",".$this->db->escape($role).",".$this->db->escape($allowanceType).",
+	    $sql = "INSERT INTO tbl_allowance(dcode,role_id,allowance_type,amount,academic_year) 
+				VALUES ( ".$this->db->escape($dcode).",".$this->db->escape($roleId).",".$this->db->escape($allowanceType).",
 				".$this->db->escape($amount).",".$this->db->escape($academicYear).")";
 	    $this->db->query($sql);
 	    return $this->db->affected_rows();		
 	  }
 	  public function updateAllowance(){
 	    $dcode=$this->input->post('dcode'); 
-	    $role=$this->input->post('role'); 
+	    $roleId=$this->input->post('roleId'); 
 		$allowanceType=$this->input->post('allowanceType'); 
 		$amount=$this->input->post('amount'); 
 		$academicYear=$this->input->post('academicYear');
 	    $USER_ID = "SYSTEM";
 
 		$sql = "update tbl_allowance set allowance_type=".$this->db->escape($allowanceType).",amount=".$this->db->escape($amount)."
-				where dcode=".$this->db->escape($dcode)." and role=".$this->db->escape($role)." 
+				where dcode=".$this->db->escape($dcode)." and role_id=".$this->db->escape($roleId)." 
 				and academic_year=".$this->db->escape($academicYear)." ";
+		log_message('info', 'updateAllowance called='.$sql);
 	    $this->db->query($sql);
 	    return $this->db->affected_rows();
 	  }
@@ -40,28 +39,28 @@
 	  public function saveDeduction(){
 	    
 		$dcode=$this->input->post('dcode'); 
-	    $role=$this->input->post('role'); 
+	    $roleId=$this->input->post('roleId'); 
 		$deductionType=$this->input->post('deductionType'); 
 		$amount=$this->input->post('amount'); 
 		$academicYear=$this->input->post('academicYear');  
 		$USER_ID = "SYSTEM";
 	    
-	    $sql = "INSERT INTO tbl_deduction(dcode,role,deduction_type,amount,academic_year) 
-				VALUES ( ".$this->db->escape($dcode).",".$this->db->escape($role).",".$this->db->escape($deductionType).",
-				".$this->db->escape($amount).",".$this->db->escape($academicYear).")";
+	    $sql = "INSERT INTO tbl_deduction(dcode,role_id,deduction_type,amount,academic_year,created_by) 
+				VALUES ( ".$this->db->escape($dcode).",".$this->db->escape($roleId).",".$this->db->escape($deductionType).",
+				".$this->db->escape($amount).",".$this->db->escape($academicYear).",".$this->db->escape(SYSTEM_USER).")";
 	    $this->db->query($sql);
 	    return $this->db->affected_rows();		
 	  }
 	  public function updateDeduction(){
 	    $dcode=$this->input->post('dcode'); 
-	    $role=$this->input->post('role'); 
+	    $roleId=$this->input->post('roleId'); 
 		$deductionType=$this->input->post('deductionType'); 
 		$amount=$this->input->post('amount'); 
 		$academicYear=$this->input->post('academicYear');
 	    $USER_ID = "SYSTEM";
 
 		$sql = "update tbl_deduction set deduction_type=".$this->db->escape($deductionType).",amount=".$this->db->escape($amount)."
-				where dcode=".$this->db->escape($dcode)." and role=".$this->db->escape($role)." 
+				where dcode=".$this->db->escape($dcode)." and role_id=".$this->db->escape($roleId)." 
 				and academic_year=".$this->db->escape($academicYear)." ";
 	    $this->db->query($sql);
 	    return $this->db->affected_rows();

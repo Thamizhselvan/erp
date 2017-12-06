@@ -16,13 +16,13 @@ function leave(id){
 function allowanceAction(){
 	
 	var dcode=$('#dcode').val();
-	var role=$('#role').val();
+	var roleId=$('#roleId').val();
 	var academicYear=$('#academicYear').val();
 	var amount=$('#amount').val();
 	var allowanceType = $('#allowanceType').val();
 	var option=$('#option').val();
 	
-	var dataStr="dcode="+dcode+"&role="+role+"&allowanceType="+allowanceType+"&academicYear="+academicYear+"&amount="+amount+"&option="+option;
+	var dataStr="dcode="+dcode+"&roleId="+roleId+"&allowanceType="+allowanceType+"&academicYear="+academicYear+"&amount="+amount+"&option="+option;
 	
 	$.ajax({
 			type:"POST",
@@ -35,17 +35,17 @@ function allowanceAction(){
 function deductionAction(){
 	
 	var dcode=$('#dcode').val();
-	var role=$('#role').val();
+	var roleId=$('#roleId').val();
 	var academicYear=$('#academicYear').val();
 	var amount=$('#amount').val();
 	var deductionType = $('#deductionType').val();
 	var option=$('#option').val();
 	
-	var dataStr="dcode="+dcode+"&role="+role+"&deductionType="+deductionType+"&academicYear="+academicYear+"&amount="+amount+"&option="+option;
+	var dataStr="dcode="+dcode+"&roleId="+roleId+"&deductionType="+deductionType+"&academicYear="+academicYear+"&amount="+amount+"&option="+option;
 	
 	$.ajax({
 			type:"POST",
-			url:"deductionAction",
+			url:"payroll/deductionAction",
 			data:dataStr,
 			success:function(data){
 				alert(data);
@@ -96,7 +96,7 @@ function getAllAllowance(){
 	});
 }
 function getAllowance(){
-	
+	buttonAction();
 	$.ajax({
 			type:"POST",
 			url: "payroll/getAllowance",
@@ -109,6 +109,7 @@ function getAllowance(){
 			}
 	});
 }
+
 function getAllDeduction(){
 	
 	$.ajax({
@@ -133,7 +134,7 @@ function getAllDeduction(){
 	});
 }
 function getDeduction(){
-	
+	buttonAction();
 	$.ajax({
 			type:"POST",
 			url: "payroll/getDeduction",
@@ -145,4 +146,14 @@ function getDeduction(){
 				$('#amount').val(data.amount);
 			}
 	});
+}
+function buttonAction(){
+	if($('#allowanceCode').val()=="new" || $('#deductionCode').val()=="new"){
+		$('#save').removeAttr('disabled');
+		$('#update').attr('disabled','disabled');
+	}
+	else{
+		$('#save').attr('disabled','disabled');
+		$('#update').removeAttr('disabled');
+	}
 }

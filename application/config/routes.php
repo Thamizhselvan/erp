@@ -92,7 +92,7 @@ $route['payroll/getAllDeduction']='PayrollImpl/getAllDeduction';
 $route['payroll/getDeduction']='PayrollImpl/getDeduction';
 
 $route['salaryslip']='SalaryslipImpl';
-$route['salaryslip/generateSalaryslip']='SalaryslipImpl/generateSalaryslip';
+$route['generateSalaryslip']='SalaryslipImpl/generateSalaryslip';
 
 
 $route['fees']='FeesImpl';

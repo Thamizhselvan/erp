@@ -2,17 +2,16 @@
    class SalaryslipImpl extends CI_Controller {
   
       public function index() { 
-		 log_message('debug', 'Employee Controller');
-		 /*Autoload enabled*/
-		 //$this->load->database();
-		 //$this->load->helper('url');
+		 $data['title'] = "Course Details";
+		 $this->load->view('header',$data);
+		 $this->load->view('dashboard');
 		 $this->load->model('CommonDAO');
 		 $data['deptList'] = $this->CommonDAO->getAllDepartment();
-		 $this->load->model('CommonDAO');
 		 $data['roleList'] = $this->CommonDAO->getAllRoles();
 		 $this->load->model('EmployeeDAO');
 		 $data['empList'] = $this->EmployeeDAO->getAllEmployeeIds();
 		 $this->load->view('salarySlip',$data);
+		 
 		 
       }
 	  public function generateSalaryslip(){
