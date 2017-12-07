@@ -29,7 +29,11 @@ function allowanceAction(){
 			url:"payroll/allowanceAction",
 			data:dataStr,
 			success:function(data){
-				alert(data);
+				$('#success').css("display","block");
+				$('#success').html(data);
+				$( "#success" ).toggle( 5000, function() {
+					clearFields();
+				});
 			}})
 }
 function deductionAction(){
@@ -48,7 +52,11 @@ function deductionAction(){
 			url:"payroll/deductionAction",
 			data:dataStr,
 			success:function(data){
-				alert(data);
+				$('#success').css("display","block");
+				$('#success').html(data);
+				$( "#success" ).toggle( 4000, function() {
+					clearFields();
+				});
 			}
 	})
 }
@@ -68,7 +76,11 @@ function leaveAction(){
 			url:"leaveAction",
 			data:dataStr,
 			success:function(data){
-				alert(data);
+				$('#success').css("display","block");
+				$('#success').html(data);
+				$( "#success" ).toggle( 4000, function() {
+					clearFields();
+				});
 			}
 	})
 }
@@ -156,4 +168,14 @@ function buttonAction(){
 		$('#save').attr('disabled','disabled');
 		$('#update').removeAttr('disabled');
 	}
+}
+function clearFields(){
+	$('#dcode').val(0);
+	$('#roleId').val(0);
+	$('#academicYear').val(0);
+	$('#amount').val('');
+	$('#allowanceType').val('');
+	$('#deductionType').val('');
+	$("#allowanceCode").find("option:not(:first)").remove();
+	$("#deductionCode").find("option:not(:first)").remove();
 }

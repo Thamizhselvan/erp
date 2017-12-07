@@ -3,7 +3,7 @@
   
       
 	  public function allowance(){
-		$data['title'] = "Course Details";
+		$data['title'] = "Payroll Allowance";
 		$this->load->view('header',$data);
 		$this->load->view('dashboard');
 		$this->load->model('CommonDAO');
@@ -16,7 +16,7 @@
 		$this->load->view('footer');  
 	  }
 	  public function deduction(){
-		$data['title'] = "Course Details";
+		$data['title'] = "Payroll Deduction";
 		$this->load->view('header',$data);
 		$this->load->view('dashboard');
 		$this->load->model('CommonDAO');

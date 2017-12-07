@@ -1,5 +1,5 @@
 function salaryslip(){
-	alert('calleddss');
+	
 	var dcode=$('#dcode').val();
 	var role=$('#roleId').val();
 	var empId=$('#empId').val();

@@ -81,7 +81,7 @@
                             </li>-->
                             
                              <li>
-                                <a href="message-task.html"><i class="fa fa-recycle "></i>Generate Payslip</a>
+                                <a href="salaryslip"><i class="fa fa-recycle "></i>Generate Payslip</a>
                             </li>
                             
                         </ul>

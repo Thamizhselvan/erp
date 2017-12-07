@@ -5,7 +5,7 @@
 				<div class="row">
                     <div class="col-md-12">
                         <h1 class="page-head-line">Deduction</h1>
-                       
+                       <h1 class="page-subhead-line" id="success" style="display:none">This is dummy text , you can replace it with your original text. </h1>
                     </div>
                 </div>
                    <!-- /. ROW  -->
@@ -21,7 +21,7 @@
 								   <div class="form-group">
                                             <label >Department</label>
                                              <div ><select id="dcode" class="form-control">
-														<option value="newCourse">---New---</option>
+														<option value="0">---Select---</option>
 														<?php foreach($deptList as $count): ?>
 														<option value="<?php echo $count->dcode; ?>"><?php echo $count->dname; ?></option>
 														<?php endforeach; ?> 
@@ -36,7 +36,7 @@
 								   <div class="form-group">
                                             <label >Role</label>
                                              <div ><select id="roleId" class="form-control">
-														<option value="newCourse">---New---</option>
+														<option value="0">---Select---</option>
 														<?php foreach($roleList as $count): ?>
 														<option value="<?php echo $count->role_id; ?>"><?php echo $count->role_name; ?></option>
 														<?php endforeach; ?> 
@@ -50,7 +50,7 @@
 								   <div class="form-group">
                                             <label >Academic Year</label>
                                              <div ><select id="academicYear" class="form-control" onchange="getAllDeduction()">
-														<option value="newCourse">---New---</option>
+														<option value="0">---Select---</option>
 														<option value="2016-2017">2016-2017</option>
 													</select>
 											</div>

@@ -58,6 +58,7 @@ function employeeAction(){
 				success:function(data){
 					$('#success').css("display","block");
 				    $('#success').html(data);
+					$('#success').toggle(4000);
 				}
 			})
 	}
@@ -156,6 +157,7 @@ function deleteEmployee(empId){
 				//alert(data);
 				$('#success').css("display","block");
 				$('#success').html(data);
+				$('#success').toggle(4000);
 			}
 		})
 	}

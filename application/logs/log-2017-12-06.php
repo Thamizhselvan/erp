@@ -1270,3 +1270,263 @@ INFO - 2017-12-06 19:39:54 --> Impl called **************123
 INFO - 2017-12-06 19:39:54 --> Model Class Initialized
 INFO - 2017-12-06 19:39:54 --> Final output sent to browser
 DEBUG - 2017-12-06 19:39:54 --> Total execution time: 0.1307
+INFO - 2017-12-06 20:13:26 --> Config Class Initialized
+INFO - 2017-12-06 20:13:26 --> Hooks Class Initialized
+DEBUG - 2017-12-06 20:13:26 --> UTF-8 Support Enabled
+INFO - 2017-12-06 20:13:26 --> Utf8 Class Initialized
+INFO - 2017-12-06 20:13:26 --> URI Class Initialized
+INFO - 2017-12-06 20:13:26 --> Router Class Initialized
+INFO - 2017-12-06 20:13:26 --> Output Class Initialized
+INFO - 2017-12-06 20:13:26 --> Security Class Initialized
+DEBUG - 2017-12-06 20:13:26 --> Global POST, GET and COOKIE data sanitized
+INFO - 2017-12-06 20:13:26 --> Input Class Initialized
+INFO - 2017-12-06 20:13:26 --> Language Class Initialized
+INFO - 2017-12-06 20:13:26 --> Loader Class Initialized
+INFO - 2017-12-06 20:13:26 --> Helper loaded: url_helper
+INFO - 2017-12-06 20:13:26 --> Helper loaded: file_helper
+INFO - 2017-12-06 20:13:26 --> Database Driver Class Initialized
+INFO - 2017-12-06 20:13:26 --> Email Class Initialized
+INFO - 2017-12-06 20:13:26 --> Controller Class Initialized
+INFO - 2017-12-06 20:13:26 --> File loaded: C:\xampp\htdocs\git\erp\application\views\header.php
+INFO - 2017-12-06 20:13:26 --> File loaded: C:\xampp\htdocs\git\erp\application\views\dashboard.php
+INFO - 2017-12-06 20:13:26 --> Model Class Initialized
+INFO - 2017-12-06 20:13:26 --> getAllRoles called2
+INFO - 2017-12-06 20:13:26 --> Model Class Initialized
+INFO - 2017-12-06 20:13:26 --> File loaded: C:\xampp\htdocs\git\erp\application\views\salarySlip.php
+INFO - 2017-12-06 20:13:26 --> Final output sent to browser
+DEBUG - 2017-12-06 20:13:26 --> Total execution time: 0.1111
+INFO - 2017-12-06 20:13:38 --> Config Class Initialized
+INFO - 2017-12-06 20:13:38 --> Hooks Class Initialized
+DEBUG - 2017-12-06 20:13:38 --> UTF-8 Support Enabled
+INFO - 2017-12-06 20:13:38 --> Utf8 Class Initialized
+INFO - 2017-12-06 20:13:38 --> URI Class Initialized
+INFO - 2017-12-06 20:13:38 --> Router Class Initialized
+INFO - 2017-12-06 20:13:38 --> Output Class Initialized
+INFO - 2017-12-06 20:13:38 --> Security Class Initialized
+DEBUG - 2017-12-06 20:13:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2017-12-06 20:13:38 --> Input Class Initialized
+INFO - 2017-12-06 20:13:38 --> Language Class Initialized
+ERROR - 2017-12-06 20:13:38 --> 404 Page Not Found: Message_taskhtml/index
+INFO - 2017-12-06 20:14:18 --> Config Class Initialized
+INFO - 2017-12-06 20:14:18 --> Hooks Class Initialized
+DEBUG - 2017-12-06 20:14:18 --> UTF-8 Support Enabled
+INFO - 2017-12-06 20:14:18 --> Utf8 Class Initialized
+INFO - 2017-12-06 20:14:18 --> URI Class Initialized
+INFO - 2017-12-06 20:14:18 --> Router Class Initialized
+INFO - 2017-12-06 20:14:18 --> Output Class Initialized
+INFO - 2017-12-06 20:14:18 --> Security Class Initialized
+DEBUG - 2017-12-06 20:14:18 --> Global POST, GET and COOKIE data sanitized
+INFO - 2017-12-06 20:14:18 --> Input Class Initialized
+INFO - 2017-12-06 20:14:18 --> Language Class Initialized
+INFO - 2017-12-06 20:14:18 --> Loader Class Initialized
+INFO - 2017-12-06 20:14:18 --> Helper loaded: url_helper
+INFO - 2017-12-06 20:14:18 --> Helper loaded: file_helper
+INFO - 2017-12-06 20:14:18 --> Database Driver Class Initialized
+INFO - 2017-12-06 20:14:18 --> Email Class Initialized
+INFO - 2017-12-06 20:14:18 --> Controller Class Initialized
+INFO - 2017-12-06 20:14:18 --> File loaded: C:\xampp\htdocs\git\erp\application\views\header.php
+INFO - 2017-12-06 20:14:18 --> File loaded: C:\xampp\htdocs\git\erp\application\views\dashboard.php
+INFO - 2017-12-06 20:14:18 --> Model Class Initialized
+INFO - 2017-12-06 20:14:18 --> getAllRoles called2
+INFO - 2017-12-06 20:14:18 --> File loaded: C:\xampp\htdocs\git\erp\application\views\allowanceMaster.php
+INFO - 2017-12-06 20:14:18 --> File loaded: C:\xampp\htdocs\git\erp\application\views\footer.php
+INFO - 2017-12-06 20:14:18 --> Final output sent to browser
+DEBUG - 2017-12-06 20:14:18 --> Total execution time: 0.1035
+INFO - 2017-12-06 20:14:22 --> Config Class Initialized
+INFO - 2017-12-06 20:14:22 --> Hooks Class Initialized
+DEBUG - 2017-12-06 20:14:22 --> UTF-8 Support Enabled
+INFO - 2017-12-06 20:14:22 --> Utf8 Class Initialized
+INFO - 2017-12-06 20:14:22 --> URI Class Initialized
+INFO - 2017-12-06 20:14:22 --> Router Class Initialized
+INFO - 2017-12-06 20:14:22 --> Output Class Initialized
+INFO - 2017-12-06 20:14:22 --> Security Class Initialized
+DEBUG - 2017-12-06 20:14:22 --> Global POST, GET and COOKIE data sanitized
+INFO - 2017-12-06 20:14:22 --> Input Class Initialized
+INFO - 2017-12-06 20:14:22 --> Language Class Initialized
+INFO - 2017-12-06 20:14:22 --> Loader Class Initialized
+INFO - 2017-12-06 20:14:23 --> Helper loaded: url_helper
+INFO - 2017-12-06 20:14:23 --> Helper loaded: file_helper
+INFO - 2017-12-06 20:14:23 --> Database Driver Class Initialized
+INFO - 2017-12-06 20:14:23 --> Email Class Initialized
+INFO - 2017-12-06 20:14:23 --> Controller Class Initialized
+INFO - 2017-12-06 20:14:23 --> File loaded: C:\xampp\htdocs\git\erp\application\views\header.php
+INFO - 2017-12-06 20:14:23 --> File loaded: C:\xampp\htdocs\git\erp\application\views\dashboard.php
+INFO - 2017-12-06 20:14:23 --> Model Class Initialized
+INFO - 2017-12-06 20:14:23 --> getAllRoles called2
+INFO - 2017-12-06 20:14:23 --> Model Class Initialized
+INFO - 2017-12-06 20:14:23 --> File loaded: C:\xampp\htdocs\git\erp\application\views\salarySlip.php
+INFO - 2017-12-06 20:14:23 --> Final output sent to browser
+DEBUG - 2017-12-06 20:14:23 --> Total execution time: 0.1074
+INFO - 2017-12-06 20:14:30 --> Config Class Initialized
+INFO - 2017-12-06 20:14:30 --> Hooks Class Initialized
+DEBUG - 2017-12-06 20:14:30 --> UTF-8 Support Enabled
+INFO - 2017-12-06 20:14:30 --> Utf8 Class Initialized
+INFO - 2017-12-06 20:14:30 --> URI Class Initialized
+INFO - 2017-12-06 20:14:30 --> Router Class Initialized
+INFO - 2017-12-06 20:14:30 --> Output Class Initialized
+INFO - 2017-12-06 20:14:30 --> Security Class Initialized
+DEBUG - 2017-12-06 20:14:30 --> Global POST, GET and COOKIE data sanitized
+INFO - 2017-12-06 20:14:30 --> Input Class Initialized
+INFO - 2017-12-06 20:14:30 --> Language Class Initialized
+INFO - 2017-12-06 20:14:30 --> Loader Class Initialized
+INFO - 2017-12-06 20:14:30 --> Helper loaded: url_helper
+INFO - 2017-12-06 20:14:30 --> Helper loaded: file_helper
+INFO - 2017-12-06 20:14:30 --> Database Driver Class Initialized
+INFO - 2017-12-06 20:14:30 --> Email Class Initialized
+INFO - 2017-12-06 20:14:30 --> Controller Class Initialized
+INFO - 2017-12-06 20:14:30 --> File loaded: C:\xampp\htdocs\git\erp\application\views\header.php
+INFO - 2017-12-06 20:14:30 --> File loaded: C:\xampp\htdocs\git\erp\application\views\dashboard.php
+INFO - 2017-12-06 20:14:30 --> Model Class Initialized
+INFO - 2017-12-06 20:14:30 --> getAllRoles called2
+INFO - 2017-12-06 20:14:30 --> File loaded: C:\xampp\htdocs\git\erp\application\views\allowanceMaster.php
+INFO - 2017-12-06 20:14:30 --> File loaded: C:\xampp\htdocs\git\erp\application\views\footer.php
+INFO - 2017-12-06 20:14:30 --> Final output sent to browser
+DEBUG - 2017-12-06 20:14:30 --> Total execution time: 0.1036
+INFO - 2017-12-06 20:14:34 --> Config Class Initialized
+INFO - 2017-12-06 20:14:34 --> Hooks Class Initialized
+DEBUG - 2017-12-06 20:14:34 --> UTF-8 Support Enabled
+INFO - 2017-12-06 20:14:34 --> Utf8 Class Initialized
+INFO - 2017-12-06 20:14:34 --> URI Class Initialized
+INFO - 2017-12-06 20:14:34 --> Router Class Initialized
+INFO - 2017-12-06 20:14:34 --> Output Class Initialized
+INFO - 2017-12-06 20:14:34 --> Security Class Initialized
+DEBUG - 2017-12-06 20:14:34 --> Global POST, GET and COOKIE data sanitized
+INFO - 2017-12-06 20:14:34 --> Input Class Initialized
+INFO - 2017-12-06 20:14:34 --> Language Class Initialized
+INFO - 2017-12-06 20:14:34 --> Loader Class Initialized
+INFO - 2017-12-06 20:14:34 --> Helper loaded: url_helper
+INFO - 2017-12-06 20:14:34 --> Helper loaded: file_helper
+INFO - 2017-12-06 20:14:34 --> Database Driver Class Initialized
+INFO - 2017-12-06 20:14:35 --> Email Class Initialized
+INFO - 2017-12-06 20:14:35 --> Controller Class Initialized
+INFO - 2017-12-06 20:14:35 --> File loaded: C:\xampp\htdocs\git\erp\application\views\header.php
+INFO - 2017-12-06 20:14:35 --> File loaded: C:\xampp\htdocs\git\erp\application\views\dashboard.php
+DEBUG - 2017-12-06 20:14:35 --> Employee Controller
+INFO - 2017-12-06 20:14:35 --> Model Class Initialized
+INFO - 2017-12-06 20:14:35 --> Model Class Initialized
+INFO - 2017-12-06 20:14:35 --> getAllRoles called2
+INFO - 2017-12-06 20:14:35 --> File loaded: C:\xampp\htdocs\git\erp\application\views\User.php
+INFO - 2017-12-06 20:14:35 --> File loaded: C:\xampp\htdocs\git\erp\application\views\footer.php
+INFO - 2017-12-06 20:14:35 --> Final output sent to browser
+DEBUG - 2017-12-06 20:14:35 --> Total execution time: 0.1215
+INFO - 2017-12-06 20:14:37 --> Config Class Initialized
+INFO - 2017-12-06 20:14:37 --> Hooks Class Initialized
+DEBUG - 2017-12-06 20:14:37 --> UTF-8 Support Enabled
+INFO - 2017-12-06 20:14:37 --> Utf8 Class Initialized
+INFO - 2017-12-06 20:14:37 --> URI Class Initialized
+INFO - 2017-12-06 20:14:37 --> Router Class Initialized
+INFO - 2017-12-06 20:14:37 --> Output Class Initialized
+INFO - 2017-12-06 20:14:37 --> Security Class Initialized
+DEBUG - 2017-12-06 20:14:37 --> Global POST, GET and COOKIE data sanitized
+INFO - 2017-12-06 20:14:37 --> Input Class Initialized
+INFO - 2017-12-06 20:14:37 --> Language Class Initialized
+INFO - 2017-12-06 20:14:37 --> Loader Class Initialized
+INFO - 2017-12-06 20:14:37 --> Helper loaded: url_helper
+INFO - 2017-12-06 20:14:37 --> Helper loaded: file_helper
+INFO - 2017-12-06 20:14:37 --> Database Driver Class Initialized
+INFO - 2017-12-06 20:14:37 --> Email Class Initialized
+INFO - 2017-12-06 20:14:37 --> Controller Class Initialized
+INFO - 2017-12-06 20:14:37 --> File loaded: C:\xampp\htdocs\git\erp\application\views\header.php
+INFO - 2017-12-06 20:14:37 --> File loaded: C:\xampp\htdocs\git\erp\application\views\dashboard.php
+INFO - 2017-12-06 20:14:37 --> Model Class Initialized
+INFO - 2017-12-06 20:14:37 --> File loaded: C:\xampp\htdocs\git\erp\application\views\employeeDashboard.php
+INFO - 2017-12-06 20:14:37 --> File loaded: C:\xampp\htdocs\git\erp\application\views\footer.php
+INFO - 2017-12-06 20:14:37 --> Final output sent to browser
+DEBUG - 2017-12-06 20:14:37 --> Total execution time: 0.1128
+INFO - 2017-12-06 20:14:39 --> Config Class Initialized
+INFO - 2017-12-06 20:14:39 --> Hooks Class Initialized
+DEBUG - 2017-12-06 20:14:39 --> UTF-8 Support Enabled
+INFO - 2017-12-06 20:14:39 --> Utf8 Class Initialized
+INFO - 2017-12-06 20:14:39 --> URI Class Initialized
+INFO - 2017-12-06 20:14:39 --> Router Class Initialized
+INFO - 2017-12-06 20:14:39 --> Output Class Initialized
+INFO - 2017-12-06 20:14:39 --> Security Class Initialized
+DEBUG - 2017-12-06 20:14:39 --> Global POST, GET and COOKIE data sanitized
+INFO - 2017-12-06 20:14:39 --> Input Class Initialized
+INFO - 2017-12-06 20:14:39 --> Language Class Initialized
+INFO - 2017-12-06 20:14:39 --> Loader Class Initialized
+INFO - 2017-12-06 20:14:39 --> Helper loaded: url_helper
+INFO - 2017-12-06 20:14:39 --> Helper loaded: file_helper
+INFO - 2017-12-06 20:14:39 --> Database Driver Class Initialized
+INFO - 2017-12-06 20:14:39 --> Email Class Initialized
+INFO - 2017-12-06 20:14:39 --> Controller Class Initialized
+INFO - 2017-12-06 20:14:39 --> File loaded: C:\xampp\htdocs\git\erp\application\views\header.php
+INFO - 2017-12-06 20:14:39 --> File loaded: C:\xampp\htdocs\git\erp\application\views\dashboard.php
+INFO - 2017-12-06 20:14:39 --> Model Class Initialized
+INFO - 2017-12-06 20:14:39 --> File loaded: C:\xampp\htdocs\git\erp\application\views\employeeDashboard.php
+INFO - 2017-12-06 20:14:39 --> File loaded: C:\xampp\htdocs\git\erp\application\views\footer.php
+INFO - 2017-12-06 20:14:39 --> Final output sent to browser
+DEBUG - 2017-12-06 20:14:39 --> Total execution time: 0.1733
+INFO - 2017-12-06 20:14:42 --> Config Class Initialized
+INFO - 2017-12-06 20:14:42 --> Hooks Class Initialized
+DEBUG - 2017-12-06 20:14:42 --> UTF-8 Support Enabled
+INFO - 2017-12-06 20:14:42 --> Utf8 Class Initialized
+INFO - 2017-12-06 20:14:42 --> URI Class Initialized
+INFO - 2017-12-06 20:14:42 --> Router Class Initialized
+INFO - 2017-12-06 20:14:42 --> Output Class Initialized
+INFO - 2017-12-06 20:14:42 --> Security Class Initialized
+DEBUG - 2017-12-06 20:14:42 --> Global POST, GET and COOKIE data sanitized
+INFO - 2017-12-06 20:14:42 --> Input Class Initialized
+INFO - 2017-12-06 20:14:42 --> Language Class Initialized
+INFO - 2017-12-06 20:14:42 --> Loader Class Initialized
+INFO - 2017-12-06 20:14:42 --> Helper loaded: url_helper
+INFO - 2017-12-06 20:14:42 --> Helper loaded: file_helper
+INFO - 2017-12-06 20:14:42 --> Database Driver Class Initialized
+INFO - 2017-12-06 20:14:42 --> Email Class Initialized
+INFO - 2017-12-06 20:14:42 --> Controller Class Initialized
+INFO - 2017-12-06 20:14:42 --> File loaded: C:\xampp\htdocs\git\erp\application\views\header.php
+INFO - 2017-12-06 20:14:42 --> File loaded: C:\xampp\htdocs\git\erp\application\views\dashboard.php
+INFO - 2017-12-06 20:14:42 --> Model Class Initialized
+INFO - 2017-12-06 20:14:42 --> File loaded: C:\xampp\htdocs\git\erp\application\views\studentDashboard.php
+INFO - 2017-12-06 20:14:42 --> File loaded: C:\xampp\htdocs\git\erp\application\views\footer.php
+INFO - 2017-12-06 20:14:42 --> Final output sent to browser
+DEBUG - 2017-12-06 20:14:42 --> Total execution time: 0.1003
+INFO - 2017-12-06 20:14:49 --> Config Class Initialized
+INFO - 2017-12-06 20:14:49 --> Hooks Class Initialized
+DEBUG - 2017-12-06 20:14:49 --> UTF-8 Support Enabled
+INFO - 2017-12-06 20:14:49 --> Utf8 Class Initialized
+INFO - 2017-12-06 20:14:49 --> URI Class Initialized
+INFO - 2017-12-06 20:14:49 --> Router Class Initialized
+INFO - 2017-12-06 20:14:49 --> Output Class Initialized
+INFO - 2017-12-06 20:14:49 --> Security Class Initialized
+DEBUG - 2017-12-06 20:14:49 --> Global POST, GET and COOKIE data sanitized
+INFO - 2017-12-06 20:14:49 --> Input Class Initialized
+INFO - 2017-12-06 20:14:49 --> Language Class Initialized
+INFO - 2017-12-06 20:14:49 --> Loader Class Initialized
+INFO - 2017-12-06 20:14:49 --> Helper loaded: url_helper
+INFO - 2017-12-06 20:14:49 --> Helper loaded: file_helper
+INFO - 2017-12-06 20:14:49 --> Database Driver Class Initialized
+INFO - 2017-12-06 20:14:49 --> Email Class Initialized
+INFO - 2017-12-06 20:14:49 --> Controller Class Initialized
+INFO - 2017-12-06 20:14:49 --> File loaded: C:\xampp\htdocs\git\erp\application\views\header.php
+INFO - 2017-12-06 20:14:49 --> File loaded: C:\xampp\htdocs\git\erp\application\views\dashboard.php
+INFO - 2017-12-06 20:14:49 --> Model Class Initialized
+INFO - 2017-12-06 20:14:49 --> File loaded: C:\xampp\htdocs\git\erp\application\views\employeeDashboard.php
+INFO - 2017-12-06 20:14:49 --> File loaded: C:\xampp\htdocs\git\erp\application\views\footer.php
+INFO - 2017-12-06 20:14:49 --> Final output sent to browser
+DEBUG - 2017-12-06 20:14:49 --> Total execution time: 0.1208
+INFO - 2017-12-06 20:15:01 --> Config Class Initialized
+INFO - 2017-12-06 20:15:01 --> Hooks Class Initialized
+DEBUG - 2017-12-06 20:15:01 --> UTF-8 Support Enabled
+INFO - 2017-12-06 20:15:01 --> Utf8 Class Initialized
+INFO - 2017-12-06 20:15:01 --> URI Class Initialized
+INFO - 2017-12-06 20:15:01 --> Router Class Initialized
+INFO - 2017-12-06 20:15:01 --> Output Class Initialized
+INFO - 2017-12-06 20:15:01 --> Security Class Initialized
+DEBUG - 2017-12-06 20:15:01 --> Global POST, GET and COOKIE data sanitized
+INFO - 2017-12-06 20:15:01 --> Input Class Initialized
+INFO - 2017-12-06 20:15:01 --> Language Class Initialized
+INFO - 2017-12-06 20:15:01 --> Loader Class Initialized
+INFO - 2017-12-06 20:15:01 --> Helper loaded: url_helper
+INFO - 2017-12-06 20:15:01 --> Helper loaded: file_helper
+INFO - 2017-12-06 20:15:01 --> Database Driver Class Initialized
+INFO - 2017-12-06 20:15:01 --> Email Class Initialized
+INFO - 2017-12-06 20:15:01 --> Controller Class Initialized
+INFO - 2017-12-06 20:15:01 --> File loaded: C:\xampp\htdocs\git\erp\application\views\header.php
+INFO - 2017-12-06 20:15:01 --> File loaded: C:\xampp\htdocs\git\erp\application\views\dashboard.php
+INFO - 2017-12-06 20:15:01 --> Model Class Initialized
+INFO - 2017-12-06 20:15:01 --> getAllRoles called2
+INFO - 2017-12-06 20:15:01 --> Model Class Initialized
+INFO - 2017-12-06 20:15:01 --> File loaded: C:\xampp\htdocs\git\erp\application\views\salarySlip.php
+INFO - 2017-12-06 20:15:01 --> Final output sent to browser
+DEBUG - 2017-12-06 20:15:01 --> Total execution time: 0.1121
