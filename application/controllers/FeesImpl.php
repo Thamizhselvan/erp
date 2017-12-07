@@ -135,36 +135,7 @@
 	    	
 	  }
 	  
-	  public function paymentAction(){
-		$option=$this->input->post('option'); 
-		if($option=="save"){
-			$this->savePayment();
-		}
-		else if($option=="update"){
-			$this->updatePayment();
-		}
-	  }
-	  public function savePayment(){
-		  $this->load->model('FeesDAO');
-	      $status=$this->FeesDAO->savePayment();
-	      if($status!=0){
-		      echo "Data Saved Successfully!!!";
-	      }
-	      else{
-		      echo "Error saving data, Contact Administrator";
-	      }
-	  }
-	  public function updatePayment(){
-		log_message('info', 'updatefees impl called');
-	       $this->load->model('FeesDAO');
-	       $status=$this->FeesDAO->updatePayment();
-	       if($status!=0){
-		       echo "Data updated Successfully!!!";
-	       }
-	       else{
-		       echo "Error updating data, Contact Administrator";
-	       }
-	  }
+	  
 	  public function saveFees(){
 	      $this->load->model('FeesDAO');
 	      $status=$this->FeesDAO->feesSave();
@@ -216,35 +187,6 @@
 // 		       echo "Error saving data, Contact Administrator";
 // 	       }
 // 	  }
-	  public function getStudentDetailsByAdmissionNo(){
-	       $admissionNo = $this->input->post('admissionNo');
-		   log_message('info', 'ctrl class called='.$admissionNo);
-	       $this->load->model('FeesDAO');
-	       $list = $this->FeesDAO->getStudentDetailsByAdmissionNo($admissionNo);
-	       echo json_encode($list);
-	  }
-	  public function getFeesDetailsBySemester(){
-
-		   $dcode=$this->input->post('dcode'); 
-		   $ccode=$this->input->post('ccode'); 
-		   $sem=$this->input->post('sem'); 
-		   $academicYear=$this->input->post('academicYear');
-		   log_message('info', 'getFeesDetailsBySemester ctrl class called='.$dcode);
-	       $this->load->model('FeesDAO');
-	       $list = $this->FeesDAO->getFeesDetailsBySemester($dcode,$ccode,$sem,$academicYear);
-	       echo json_encode($list);
-	  }
-	  public function getFeesPaidDetailsByStudent(){
-		   $admissionNo=$this->input->post('admissionNo');
-		   $dcode=$this->input->post('dcode'); 
-		   $ccode=$this->input->post('ccode'); 
-		   $sem=$this->input->post('sem'); 
-		   $academicYear=$this->input->post('academicYear');
-		   log_message('info', 'getFeesPaidDetailsByStudent ctrl class called='.$dcode);
-	       $this->load->model('FeesDAO');
-	       $list = $this->FeesDAO->getFeesPaidDetailsByStudent($admissionNo,$dcode,$ccode,$sem,$academicYear);
-	       echo json_encode($list);
-	  }
 	  public function currentDate(){
     		return date('Y-m-d H:i:s');
     	}

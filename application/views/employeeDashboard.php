@@ -38,10 +38,17 @@
 			 <td><?php echo $count->mobile; ?></td><td><?php echo $count->email; ?></td>
 			 
 			<td>
-			    <p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" onclick="editEmployee()"><span class="glyphicon glyphicon-pencil"></span></button></p>
+			    <p data-placement="top" data-toggle="tooltip" title="Edit"><a href="employee" data-title="Edit" >
+					
+						<span class="glyphicon glyphicon-pencil"></span>
+					</a>
+				</p>
 			</td>
 			<td>
-	            <p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" id="<?php echo $count->emp_id; ?>" onclick="deleteEmployee(this.id)" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
+	            <p data-placement="top" data-toggle="tooltip" title="Delete">
+				<a href="#" id="<?php echo $count->emp_id; ?>" onclick="deleteEmployee(this.id)" >
+				<span class="glyphicon glyphicon-trash"></span>
+				</a></p></td>
 			</tr>
 			<?php endforeach; ?>
                                 </tbody>

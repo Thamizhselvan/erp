@@ -6,8 +6,8 @@
         $data['title'] = "Fees Payment";
 		$this->load->view('header',$data);
 		$this->load->view('dashboard');
-		$this->load->model('FeesDAO');
-		$data['stuList'] = $this->FeesDAO->getAllStudentByAdmissionNo();
+		$this->load->model('PaymentDAO');
+		$data['stuList'] = $this->PaymentDAO->getAllStudentByAdmissionNo();
 		$this->load->view('feesPayment',$data);
 		$this->load->view('footer');
 		 
@@ -22,8 +22,8 @@
 		}
 	  }
 	  public function savePayment(){
-		  $this->load->model('FeesDAO');
-	      $status=$this->FeesDAO->savePayment();
+		  $this->load->model('PaymentDAO');
+	      $status=$this->PaymentDAO->savePayment();
 	      if($status!=0){
 		      echo "Data Saved Successfully!!!";
 	      }
@@ -33,8 +33,8 @@
 	  }
 	  public function updatePayment(){
 		log_message('info', 'updatefees impl called');
-	       $this->load->model('FeesDAO');
-	       $status=$this->FeesDAO->updatePayment();
+	       $this->load->model('PaymentDAO');
+	       $status=$this->PaymentDAO->updatePayment();
 	       if($status!=0){
 		       echo "Data updated Successfully!!!";
 	       }
@@ -42,6 +42,35 @@
 		       echo "Error updating data, Contact Administrator";
 	       }
 	  }
-	  	  
+	  public function getFeesDetailsBySemester(){
+
+		   $dcode=$this->input->post('dcode'); 
+		   $ccode=$this->input->post('ccode'); 
+		   $sem=$this->input->post('sem'); 
+		   $academicYear=$this->input->post('academicYear');
+		   log_message('info', 'getFeesDetailsBySemester ctrl class called='.$dcode);
+	       $this->load->model('PaymentDAO');
+	       $list = $this->PaymentDAO->getFeesDetailsBySemester($dcode,$ccode,$sem,$academicYear);
+	       echo json_encode($list);
+	  }
+		public function getStudentDetailsByAdmissionNo(){
+	       $admissionNo = $this->input->post('admissionNo');
+		   log_message('info', 'ctrl class called='.$admissionNo);
+	       $this->load->model('PaymentDAO');
+	       $list = $this->PaymentDAO->getStudentDetailsByAdmissionNo($admissionNo);
+	       echo json_encode($list);
+	  }
+	  public function getFeesPaidDetailsByStudent(){
+		   $admissionNo=$this->input->post('admissionNo');
+		   $dcode=$this->input->post('dcode'); 
+		   $ccode=$this->input->post('ccode'); 
+		   $sem=$this->input->post('sem'); 
+		   $academicYear=$this->input->post('academicYear');
+		   log_message('info', 'getFeesPaidDetailsByStudent ctrl class called='.$dcode);
+	       $this->load->model('PaymentDAO');
+	       $list = $this->PaymentDAO->getFeesPaidDetailsByStudent($admissionNo,$dcode,$ccode,$sem,$academicYear);
+	       echo json_encode($list);
+	  }
+	  
    } 
 ?>

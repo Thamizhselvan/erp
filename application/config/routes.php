@@ -94,7 +94,6 @@ $route['payroll/getDeduction']='PayrollImpl/getDeduction';
 $route['salaryslip']='SalaryslipImpl';
 $route['generateSalaryslip']='SalaryslipImpl/generateSalaryslip';
 
-
 $route['fees']='FeesImpl';
 //$route['fees/(:any)'] = "FeesImpl/index/$1";
 $route['fees/getFeesDetails']='FeesImpl/getFeesDetails';
@@ -102,13 +101,14 @@ $route['fees/feesAction']='FeesImpl/feesAction';
 $route['fees/getCourseByDepartment']='FeesImpl/getCourseByDepartment';
 $route['fees/getSemByCourse']='FeesImpl/getSemByCourse';
 $route['fees/addFeesAction']='FeesImpl/addFeesAction';
-$route['fees/getStudentDetailsByAdmissionNo']='FeesImpl/getStudentDetailsByAdmissionNo';
-$route['fees/getFeesDetailsBySemester']='FeesImpl/getFeesDetailsBySemester';
 
 $route['feespayment']='PaymentImpl';
 $route['feespayment/paymentAction']='PaymentImpl/paymentAction';
-$route['fees/getFeesPaidDetailsByStudent']='FeesImpl/getFeesPaidDetailsByStudent';
+$route['fees/getFeesPaidDetailsByStudent']='PaymentImpl/getFeesPaidDetailsByStudent';
+$route['fees/getStudentDetailsByAdmissionNo']='PaymentImpl/getStudentDetailsByAdmissionNo';
+$route['fees/getFeesDetailsBySemester']='PaymentImpl/getFeesDetailsBySemester';
 $route['feespayment/sendMail']='PaymentImpl/sendMail';
+
 /*admission details*/
 $route['admissioncreate'] = 'admission/create';
 $route['personalcreate'] = 'admission/personalcreate';

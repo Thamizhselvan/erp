@@ -148,13 +148,12 @@ function validateForm(){
 	return status;
 }
 function deleteEmployee(empId){
-	if(confirm("Are you sure you want to delete this quote?")){
+	if(confirm("Are you sure you want to delete this employee?")){
 		$.ajax({
 			type:"POST",
 			url:"employeeDelete",
 			data:"empId="+empId,
 			success:function(data){
-				//alert(data);
 				$('#success').css("display","block");
 				$('#success').html(data);
 				$('#success').toggle(4000);
@@ -163,10 +162,7 @@ function deleteEmployee(empId){
 	}
 	
 }
-function addEmployee(){
-	
-	window.location="employee";
-}
+
 $(window).on('load', function () {
   //alert("Window Loaded");
   
