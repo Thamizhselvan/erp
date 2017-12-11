@@ -16,14 +16,16 @@ function collegeSettingsAction(){
 	var mobile = $('#mobile').val();
 	var email = $('#email').val();
 	var website = $('#website').val();
+	var startupYr = $('#startup_yr').val();
+	var dateFormat = $('#dateFormat').val();
 	var option=$('#option').val();
 	
-	var dataStr="collegeName="+collegeName+"&startDt="+startDt+"&endDt="+endDt+"&addr1="+addr1+"&addr2="+addr2+"&city="+city;
-	dataStr+="&state="+state+"&mobile="+mobile+"&phoneNo="+phoneNo+"&email="+email+"&website="+website+"&option="+option;
+	var dataStr="collegeName="+collegeName+"&startDt="+startDt+"&addr1="+addr1+"&addr2="+addr2+"&city="+city+"&endDt="+endDt;
+	dataStr+="&state="+state+"&mobile="+mobile+"&phoneNo="+phoneNo+"&email="+email+"&website="+website+"&option="+option+"&startupYr="+startupYr+"&dateFormat="+dateFormat;
 	
 	$.ajax({
 			type:"POST",
-			url:"setup/collegeSettings",
+			url:"settings/collegeSettings",
 			data:dataStr,
 			success:function(data){
 				$('#success').css("display","block");

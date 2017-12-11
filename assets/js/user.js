@@ -39,3 +39,47 @@ function checkUser(){
 			}
 		})
 }
+function profileSettings(){
+	alert('called000');
+	var profileName = $('#profileName').val();
+	var roleId = $('#roleId').val();
+	var addr1=$('#addr1').val();
+	var addr2=$('#addr2').val();
+	var city=$('#city').val();
+	var state=$('#state').val();
+	var phoneNo=$('#phoneNo').val();
+	var mobile=$('#mobile').val();
+	var email=$('#email').val();
+	var website=$('#website').val();
+	var username=$('#username').val();
+	var password=$('#password').val();
+	
+	var dataStr="profileName="+profileName+"&roleId="+roleId+"&addr1="+addr1+"&addr2="+addr2+"&city="+city+"&state="+state+"&phoneNo="+phoneNo;
+	dataStr+="&mobile="+mobile+"&email="+email+"&website="+website+"&username="+username+"&password="+password;
+	$.ajax({
+			type:"POST",
+			url:"userprofile/profileSettings",
+			data: dataStr,
+			success:function(data){
+				$('#success').css("display","block");
+				$('#success').html(data);
+				$( "#success" ).toggle( 4000, function() {
+					clearFields();
+				});
+			}
+		})
+}
+function clearFields(){
+	$('#profileName').val('');
+	$('#roleId').val('');
+	$('#addr1').val('');
+	$('#addr2').val('');
+	$('#city').val('');
+	$('#state').val('');
+	$('#phoneNo').val('');
+	$('#mobile').val('');
+	$('#email').val('');
+	$('#website').val('');
+	$('#username').val('');
+	$('#password').val('');
+}

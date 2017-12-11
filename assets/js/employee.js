@@ -53,7 +53,7 @@ function employeeAction(){
 	if(validateForm()){
 		$.ajax({
 				type:"POST",
-				url:"employeeAction",
+				url:"employee/employeeAction",
 				data:dataStr,
 				success:function(data){
 					$('#success').css("display","block");
