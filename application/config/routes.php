@@ -60,6 +60,7 @@ $route['user/checkUser']='UserManagementImpl/checkUser';
 
 $route['userprofile']='UserProfileImpl';
 $route['userprofile/profileSettings']='UserProfileImpl/profileSettings';
+$route['userprofile/userprofile']='UserProfileImpl/userprofile';
 
 $route['department']='CommonImpl/department';
 $route['department/departmentAction']='CommonImpl/departmentAction';
