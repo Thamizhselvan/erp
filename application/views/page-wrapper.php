@@ -3,7 +3,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="page-head-line">DASHBOARD</h1>
-                        <h1 class="page-subhead-line">This is dummy text , you can replace it with your original text. </h1>
+                        <h1 class="page-subhead-line"></h1>
 
                     </div>
                 </div>
@@ -132,78 +132,6 @@
                     <!-- /.REVIEWS &  SLIDESHOW  -->
                     <div class="col-md-4">
 
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                Recent Chat History
-                            </div>
-                            <div class="panel-body" style="padding: 0px;">
-                                <div class="chat-widget-main">
-
-
-                                    <div class="chat-widget-left">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    </div>
-                                    <div class="chat-widget-name-left">
-                                        <h4>Amanna Seiar</h4>
-                                    </div>
-                                    <div class="chat-widget-right">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    </div>
-                                    <div class="chat-widget-name-right">
-                                        <h4>Donim Cruseia </h4>
-                                    </div>
-                                    <div class="chat-widget-left">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    </div>
-                                    <div class="chat-widget-name-left">
-                                        <h4>Amanna Seiar</h4>
-                                    </div>
-                                    <div class="chat-widget-right">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    </div>
-                                    <div class="chat-widget-name-right">
-                                        <h4>Donim Cruseia </h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel-footer">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Enter Message" />
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-success" type="button">SEND</button>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <!--/.Chat Panel End-->
-                </div>
-                <!-- /. ROW  -->
-
-
-                <div class="row">
-
-                    <div class="col-md-8">
-                        <div class="list-group">
-                            <a href="#" class="list-group-item active">
-                                <h4 class="list-group-item-heading">LIST GROUP HEADING</h4>
-                                <p class="list-group-item-text" style="line-height: 30px;">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </p>
-                            </a>
-                        </div>
-                        <br />
-                        <!-- 16:9 aspect ratio -->
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="//www.youtube.com/embed/zpOULjyy-n8?rel=0"></iframe>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
                         <div class="panel panel-info">
                             <div class="panel-heading">
                                 <i class="fa fa-bell fa-fw"></i>Notifications Panel
@@ -264,8 +192,12 @@
                             </div>
 
                         </div>
+
+
                     </div>
+                    <!--/.Chat Panel End-->
                 </div>
+                
                 <!--/.Row-->
                 <hr />
                 <div class="row">
@@ -408,54 +340,7 @@
                 </div>
                 <!--/.Row-->
                 <hr />
-                <div class="row" style="padding-bottom: 100px; `">
-                    <div class="col-md-6">
-                        <div id="comments-sec">
-                            <h4><strong>Compose Support Ticket </strong></h4>
-                            <hr />
-
-
-                            <div class="form-group  ">
-                                <label>Please Write a Subject Line</label>
-                                <input type="text" class="form-control" required="required" placeholder="Enter Subject Of Ticket" />
-                            </div>
-                            <div class="form-group ">
-                                <label>Please Enter Issue</label>
-                                <textarea class="form-control" rows="8"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-success">Compose &amp; Send Ticket</button>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-md-6">
-                        <div class="panel panel-back noti-box">
-                            <span class="icon-box bg-color-black">
-                                <i class="fa fa-bicycle"></i>
-                            </span>
-                            <div class="text-box">
-                                <p class="main-text">52 Important Issues to Fix </p>
-                                <p>Please fix these issues to work smooth</p>
-                                <p>Time Left: 30 mins</p>
-                                <hr />
-                                <p>
-                                    <span class=" color-bottom-txt"><i class="fa fa-edit"></i>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit gthn. 
-                              Lorem ipsum dolor sit amet, consectetur adipiscing elit gthn. 
-                               Lorem ipsum dolor sit amet, consectetur adipiscing elit gthn.
-                             
-                                    </span>
-
-
-                                </p>
-                                <hr />
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit gthn. 
-                               Lorem ipsum dolor sit amet, consectetur adipiscing elit gthn.
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
                 <!--/.ROW-->
 
             </div>
