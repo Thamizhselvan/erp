@@ -55,6 +55,37 @@
 		   echo "Error updating data, Contact Administrator";
 	   }
 	  }
+	  public function profileSettings(){
+		$data = array(
+		'profile_name' => $this->input->post('profileName'),
+		'role_id' => $this->input->post('roleId'),
+		'addr1' => $this->input->post('addr1'),
+		'addr2' => $this->input->post('addr2'),
+		'city' => $this->input->post('city'),
+		'state' => $this->input->post('state'),
+		'phone' => $this->input->post('phoneNo'),
+		'mobile' => $this->input->post('mobile'),
+		'email' => $this->input->post('email'),
+		'website' => $this->input->post('website'),
+		'username' => $this->input->post('username'),
+		'password' => $this->input->post('password')
+		);
+	   $this->load->model('SettingsDAO');
+	   $usercount=$this->SettingsDAO->profileCheck($this->input->post('username'));
+	   log_message('debug', 'user check'.$usercount);
+	   if($usercount==0){
+			$status=$this->SettingsDAO->saveProfile($data);
+	   }
+	   else{ 
+		   $status=$this->SettingsDAO->updateProfile($data, $this->input->post('username'));
+	   }
+	   if($status){
+		   echo "Data Saved Successfully!!!";
+	   }
+	   else{
+		   echo "Error saving data, Contact Administrator";
+	   }
+	  }
 	  
    } 
 ?>
