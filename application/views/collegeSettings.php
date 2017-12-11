@@ -27,13 +27,7 @@
                                           <!--  <p class="help-block">Help text here.</p> -->
                                  </div>
                                </div>  
-                                 <div class="col-md-6">
-									 <div class="form-group">
-                                            <label >Academic Year</label>
-                                            <div  ><input class="form-control"  id="startDt" type="text"> <input class="form-control"  id="endDt" type="text"></div>
-                                     <!-- <p class="help-block">Help text here.</p> -->
-                                     </div>
-                                </div>
+                                 
                                 <div class="col-md-6">
 										<div class="form-group">
                                             <label   >Address Line1</label>
@@ -92,29 +86,42 @@
                                      <!-- <p class="help-block">Help text here.</p> -->
                                   </div>
                                   </div>
-                                   
+								  <div class="col-md-6">
+                                  <div class="form-group">
+                                            <label  >Startup year</label>
+                                            <div ><input class="form-control"  id="startup_yr" type="text"></div>
+                                     <!-- <p class="help-block">Help text here.</p> -->
+                                  </div>
+                                  </div>
+                                   <div class="col-md-6">
+									 <div class="form-group">
+                                            <label >Academic Year</label>
+                                            <div  ><input class="form-control"  id="startDt" type="text"> <input class="form-control"  id="endDt" type="text"></div>
+                                     <!-- <p class="help-block">Help text here.</p> -->
+                                     </div>
+                                </div>
+								<div class="col-md-6">
+                                  <div class="form-group">
+                                            <label>Date Format</label>
+                                            <div ><select class="form-control"  id="dateFormat">
+												<option class="form-control" value="0">---Select---</option>
+												<option class="form-control" value="1">dd/mm/yyyy</option>
+												<option class="form-control" value="2">dd-mm-yyyy</option>
+												<option class="form-control" value="3">yyyy/mm/dd</option>
+												<option class="form-control" value="4">yyyy-mm-dd</option>
+											</select></div>
+                                     <!-- <p class="help-block">Help text here.</p> -->
+                                  </div>
+                                  </div>
+								  
                                    <div class="col-md-6">  
 									   <div class="form-group"></div>                                                                               
 								   </div>
-                                     <!--  <div class="col-md-12 col-sm-12 col-xs-12">
-											 
-												<input class="btn btn-info form-control" type="hidden" name="option" id="option" value="save">
-											 
-											<div class="col-md-6 col-sm-6 col-xs-12">
-												<button class="btn btn-info form-control" id="save" onclick="employee(this)">save</button>
-											</div>
-											<div class="col-md-6 col-sm-6 col-xs-12">
-												<button class="btn btn-info form-control" id="update" onclick="employee(this)">update</button>
-											</div>
-									   </div> -->
 							          <div class="col-md-12 col-sm-12 col-xs-12">
 											 
-												<input class="form-control" type="hidden" name="option" id="option" value="save">
-											 
+											<input class="form-control" type="hidden" name="option" id="option" value="save">
 											<div class="col-md-6 col-sm-6 col-xs-12">
 											    <input type="button" class="btn btn-info form-control" value="save" id="save" onclick="collegeSettings(this)">
-	  
-												
 												<!--<button class="btn btn-info form-control" id="save" onclick="employee(this)">save</button>-->
 											</div>
 											<div class="col-md-6 col-sm-6 col-xs-12">

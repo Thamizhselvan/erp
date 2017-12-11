@@ -30,6 +30,7 @@
 	<script type = 'text/javascript' src = "../assets/js/payroll.js"></script>
 	<script type = 'text/javascript' src = "../assets/js/salaryslip.js"></script>
 	<script type = 'text/javascript' src = "../assets/js/payment.js"></script>
+	<script type = 'text/javascript' src = "../assets/js/user.js"></script>
      <!--WIZARD STYLES-->
     <link href="../assets/css/wizard/normalize.css" rel="stylesheet" />
     <link href="../assets/css/wizard/wizardMain.css" rel="stylesheet" />

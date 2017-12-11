@@ -21,12 +21,12 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Employee Name</th>
-                            			<th>Qualification</th>
-                            			<th>Designation</th>
-                            			<th>Date of Joining</th>
-                            			<th>Mobile</th>
-                            			<th>Email</th>
+                                        <th>Student Name</th>
+                            			<th>Course</th>
+                            			<th>Department</th>
+                            			<th>Semester</th>
+                            			<th>Passout Year</th>
+										<th>Status</th>
                                         <th colspan="2">Action</th>
                                     </tr>
                                 </thead>
@@ -36,9 +36,8 @@
 			 <td><?php echo $count->emp_id; ?></td><td><?php echo $count->emp_name; ?></td>
 			 <td><?php echo $count->qualification; ?></td><td><?php echo $count->role_name; ?></td><td><?php echo $count->doj; ?></td>
 			 <td><?php echo $count->mobile; ?></td><td><?php echo $count->email; ?></td>
-			 
 			<td>
-			    <p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" onclick="editEmployee()"><span class="glyphicon glyphicon-pencil"></span></button></p>
+			    <p data-placement="top" data-toggle="tooltip" title="View"><button class="btn btn-primary btn-xs" data-title="View" data-toggle="modal" data-target="#View" onclick="editEmployee()"><span class="glyphicon glyphicon-eye-open"></span></button></p>
 			</td>
 			<td>
 	            <p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" id="<?php echo $count->emp_id; ?>" onclick="deleteEmployee(this.id)" ><span class="glyphicon glyphicon-trash"></span></button></p></td>

@@ -22,7 +22,7 @@
                                <div class="col-md-6">  
 								   <div class="form-group">
                                             <label >Profile Name</label>
-                                             <div  ><input class="form-control"  id="collegeName" type="text"></div>
+                                             <div  ><input class="form-control"  id="profileName" type="text"></div>
                                            <!-- <input class="form-control" type="text"> -->
                                           <!--  <p class="help-block">Help text here.</p> -->
                                  </div>
@@ -30,7 +30,7 @@
                                  <div class="col-md-6">
 									 <div class="form-group">
                                             <label >Role</label>
-                                            <div  ><input class="form-control"  id="startDt" type="text"> </div>
+                                            <div  ><input class="form-control"  id="roleId" type="text" disabled="disabled"> </div>
                                      <!-- <p class="help-block">Help text here.</p> -->
                                      </div>
                                 </div>
@@ -95,14 +95,14 @@
                                    <div class="col-md-6">
                                   <div class="form-group">
                                             <label  >Username</label>
-                                            <div ><input class="form-control"  id="website" type="text"></div>
+                                            <div ><input class="form-control"  id="username" type="text"></div>
                                      <!-- <p class="help-block">Help text here.</p> -->
                                   </div>
                                   </div>
                                   <div class="col-md-6">
                                   <div class="form-group">
                                             <label  >Password</label>
-                                            <div ><input class="form-control"  id="website" type="text"></div>
+                                            <div ><input class="form-control"  id="password" type="password"></div>
                                      <!-- <p class="help-block">Help text here.</p> -->
                                   </div>
                                   </div>
@@ -125,7 +125,7 @@
 												<input class="form-control" type="hidden" name="option" id="option" value="save">
 											 
 											<div class="col-md-6 col-sm-6 col-xs-12">
-											    <input type="button" class="btn btn-info form-control" value="Submit" id="sumit" onclick="updateUser(this)">
+											    <input type="button" class="btn btn-info form-control" value="Submit" id="sumit" onclick="profileSettings(this)">
 	  
 												
 												<!--<button class="btn btn-info form-control" id="save" onclick="employee(this)">save</button>-->
