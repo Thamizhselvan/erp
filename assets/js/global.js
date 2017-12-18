@@ -16,10 +16,12 @@ function courseAction(){
 	
 	$.ajax({
 			type:"POST",
-			url:"department/courseAction",
+			url:"course/courseAction",
 			data:dataStr,
 			success:function(data){
-				alert(data);
+				$('#success').css("display","block");
+				$('#success').html(data);
+				$('#success').toggle(4000);
 			}
 	})
 }
@@ -31,13 +33,14 @@ function department(){
 			url:"department/departmentAction",
 			data:dataStr,
 			success:function(data){
-				alert(data);
+				$('#success').css("display","block");
+				$('#success').html(data);
+				$('#success').toggle(4000);
 			}
 	})
 }
 function getCourse(){
 	if($('#ccode').val()=="newCourse"){
-		alert('ghghgj');
 		$('#save').removeAttr('disabled');
 		$('#update').attr('disabled','disabled');
 	}
@@ -47,7 +50,7 @@ function getCourse(){
 	}
 	$.ajax({
 			type:"POST",
-			url:"department/getCourse",
+			url:"course/getCourse",
 			data:"ccode="+$('#ccode').val(),
 			success:function(res){
 				var obj = jQuery.parseJSON(res);
@@ -67,7 +70,9 @@ function deptCorseSave(){
 			url:"department/saveCourse",
 			data:"cname="+$('#cname').val()+"&duration="+$('#duration').val()+"&sem="+$('#sem').val()+"&startYear="+$('#startYear').val(),
 			success:function(data){
-				alert(data);
+				$('#success').css("display","block");
+				$('#success').html(data);
+				$('#success').toggle(4000);
 			}
 		})
 	}
@@ -91,7 +96,9 @@ function deptCorseUpdate(){
 			url:"department/updateDepartment",
 			data:"dname="+$('#dname').val()+"&dcode="+$('#dcode').val(),
 			success:function(data){
-				alert(data);
+				$('#success').css("display","block");
+				$('#success').html(data);
+				$('#success').toggle(4000);
 			}
 		})
 	}
@@ -102,8 +109,31 @@ function deptCorseUpdate(){
 			url:"department/updateCourse",
 			data:"dcode="+$('#dcode').val()+"&ccode="+$('#ccode').val()+"&cname="+$('#cname').val()+"&startYear="+$('#startYear').val()+"&duration="+$('#duration').val(),
 			success:function(data){
-				alert(data);
+				$('#success').css("display","block");
+				$('#success').html(data);
+				$('#success').toggle(4000);
 			}
 		})
 	}
+}
+function getCourseByDept(){
+	$.ajax({
+			type:"POST",
+			url: "course/getCourseByDept",
+			data:"dcode="+$('#dcode').val(),
+			success: function(res) 
+			{
+				$("#ccode").find("option:not(:first)").remove();
+				var data = $.parseJSON(res);
+				$(data).each(function(i,val){
+				  $.each(val,function(key,val){
+						 
+						var opt = $('<option />'); 
+						opt.val(key);
+						opt.text(val);
+						$('#ccode').append(opt);
+				  });
+				});
+			}
+	});
 }

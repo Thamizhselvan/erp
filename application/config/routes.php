@@ -60,7 +60,6 @@ $route['user/checkUser']='UserManagementImpl/checkUser';
 
 $route['userprofile']='UserProfileImpl';
 $route['userprofile/profileSettings']='UserProfileImpl/profileSettings';
-$route['userprofile/userprofile']='UserProfileImpl/userprofile';
 
 $route['department']='CommonImpl/department';
 $route['department/departmentAction']='CommonImpl/departmentAction';
@@ -72,7 +71,7 @@ $route['course/saveCourse']='CommonImpl/saveCourse';
 $route['course/updateCourse']='CommonImpl/updateCourse';
 $route['course/getCourse']='CommonImpl/getCourse';
 $route['course/courseAction']='CommonImpl/courseAction';
-
+$route['course/getCourseByDept']='CommonImpl/getCourseByDept';
 
 $route['employee']='EmployeeImpl';
 $route['employee/list']='EmployeeImpl/empList';
@@ -118,5 +117,6 @@ $route['other'] = 'admission/otherscreate';
 $route['gardian'] = 'admission/guardianscreate';
 $route['education'] = 'admission/educationcreate';
 
+$route['paymentreciept'] = 'ReportsImpl';
 // dashboard
 $route['dashboard'] = 'dashboard/index';

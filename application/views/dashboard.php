@@ -61,6 +61,9 @@
                              <li>
                                 <a href="feespayment"><i class="fa fa-key "></i>Pay Fees</a>
                             </li>
+							<li>
+                                <a href="report"><i class="fa fa-key "></i>Report</a>
+                            </li>
                             
                         </ul>
                     </li>

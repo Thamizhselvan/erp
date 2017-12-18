@@ -3063,10 +3063,14 @@ fieldset[disabled] .btn-link:focus {
 }
 .btn-xs,
 .btn-group-xs > .btn {
-  padding: 1px 5px;
-  font-size: 12px;
-  line-height: 1.5;
-  border-radius: 3px;
+      padding: 6px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+    float: right;
+    margin: 7px;
+    background-color: darkgreen;
+	border-color: darkgreen;
 }
 .btn-block {
   display: block;

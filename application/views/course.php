@@ -5,7 +5,7 @@
 				<div class="row">
                     <div class="col-md-12">
                         <h1 class="page-head-line">Course Details</h1>
-                       
+                       <h1 class="page-subhead-line" id="success" style="display:none">This is dummy text , you can replace it with your original text. </h1>
                     </div>
                 </div>
                    <!-- /. ROW  -->
@@ -20,8 +20,8 @@
                                <div class="col-md-6"> 
 								   <div class="form-group">
                                             <label >Department</label>
-                                             <div ><select id="dcode" class="form-control" onchange="geDepartment()">
-														<option value="newCourse">---New---</option>
+                                             <div ><select id="dcode" class="form-control" onchange="getCourseByDept()">
+														<option value="0">---Select---</option>
 														<?php foreach($deptList as $count): ?>
 														<option value="<?php echo $count->dcode; ?>"><?php echo $count->dname; ?></option>
 														<?php endforeach; ?> 
@@ -37,9 +37,7 @@
                                             <label >Course</label>
                                              <div ><select id="ccode" class="form-control" onchange="getCourse()">
 														<option value="newCourse">---New---</option>
-														<?php foreach($courseList as $count): ?>
-														<option value="<?php echo $count->ccode; ?>"><?php echo $count->cname; ?></option>
-														<?php endforeach; ?> 
+														
 													</select>
 											</div>
                                            <!-- <input class="form-control" type="text"> -->

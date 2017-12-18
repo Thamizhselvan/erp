@@ -21,7 +21,9 @@
     <link href="../assets/css/custom.css" rel="stylesheet" />
     <!-- GOOGLE FONTS-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-    <script type = 'text/javascript' src = "../assets/js/jquery-3.1.1.js"></script> 
+    
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	<script type = 'text/javascript' src = "../assets/js/jquery.printPage.js"></script>
     <script type = 'text/javascript' src = "../assets/js/global.js"></script>
 	<script type = 'text/javascript' src = "../assets/js/employee.js"></script>
 	<script type = 'text/javascript' src = "../assets/js/fees.js"></script>

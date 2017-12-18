@@ -144,6 +144,13 @@
 	    $list = $this->CommonDAO->getCourse($ccode);
 	    echo json_encode($list);  
 	  }
+	  public function getCourseByDept(){
+		$dcode = $this->input->post('dcode');
+	    log_message('info', 'getCourseByDept called='.$dcode);
+	    $this->load->model('CommonDAO');
+	    $list = $this->CommonDAO->getCourseByDept($dcode);
+	    echo json_encode($list);  
+	  }
 	  
    } 
 ?>

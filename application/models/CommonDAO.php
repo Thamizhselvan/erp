@@ -102,5 +102,20 @@
 	    $query = $this->db->get();
 	    return $query->result();
 	  }
+	  public function getCourseByDept($dcode){
+	       
+	      $this->db->select("ccode,cname");
+	      $this->db->where('dcode',$dcode);
+	      $this->db->from('mst_course'); 
+	      $query = $this->db->get(); 
+	      $resultArr=array();
+	      if($query->result()){
+			foreach ($query->result() as $list) {
+			 $resultArr[$list->ccode] = $list->cname;
+			}
+	       }
+	       return $resultArr;
+		
+	  }
    } 
 ?> 

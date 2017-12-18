@@ -45,6 +45,17 @@ function paymentAction(){
 					$( "#success" ).toggle( 5000, function() {
 						clearFields();
 					});
+					$('#print').removeAttr('disabled');
+					$('#send').removeAttr('disabled');
+					$('#save').attr('disabled','disabled');
+					
+					$('#sname').text($("#admissionNo option:selected").text());
+					$('#course').text($('#cname').val());
+					$('#dept').text($('#dname').val());
+					$('#semester').text($('#sem').val());
+					$('#dueDate').text($('#dueDt').val());
+					$('#mytable1').append('<tr><td></td><td>Amount Recieved: </td><td>'+$('#amountPay').val()+'</td></tr>');
+					$('#mytable1').append('<tr><td></td><td>Balance Amount: </td><td>'+$('#balAmount').val()+'</td></tr>');
 				}
 			})
 	}
@@ -172,11 +183,12 @@ function getFeesDetailsBySemester(){
 				  $.each(val,function(key,val) {
 					count++;
 					$('#mytable').append('<tr><td>'+count+'</td><td>'+key+'</td><td>'+val+'</td></tr>');
+					$('#mytable1').append('<tr><td>'+count+'</td><td>'+key+'</td><td>'+val+'</td></tr>');
 					sum=parseFloat(sum)+parseFloat(val);
 				  });
 				});
-				$('#mytable').append('<tr><td></td><td>Total: </td><td><input type=hidden id=totAmount value='+sum+'>'+sum+'</td></tr>');
-				//$('#balAmount').val(sum);
+				$('#mytable').append('<tr><td></td><td>Total: </td><td><input type=hidden id=totAmount name=totAmount value='+sum+'>'+sum+'</td></tr>');
+				$('#mytable1').append('<tr><td></td><td>Total: </td><td><input type=hidden id=totAmount name=totAmount value='+sum+'>'+sum+'</td></tr>');
 				if(count!=0){
 					dataStr+="&admissionNo="+$('#admissionNo').val();
 					$.ajax({
@@ -188,6 +200,9 @@ function getFeesDetailsBySemester(){
 							if(data.amountPay!=0 && data.dueDt!=null){
 								var balAmount=parseFloat(sum)-parseFloat(data.amountPay);
 								$('#balAmount').val(balAmount);
+							}
+							else{
+								$('#balAmount').val(sum);
 							}
 						}
 					});
@@ -242,4 +257,21 @@ function clearFields(){
 	$('#amountPay').val('');
 	$('#balAmount').val('');
 	$('#dueDt').val('');
+	$("#mytable tr").remove(); 
+	$("#mytable1 tr").remove(); 
+	//$('#feespayment').reset();
+}
+function printfees() {
+	//$("#printfees").attr('target' ,'_blank');
+    var printContents = document.getElementById('printableArea').innerHTML;
+    var originalContents = document.body.innerHTML;
+    document.body.innerHTML = printContents;
+    window.print();
+    document.body.innerHTML = originalContents;
+	
+
+	/*var mode = 'iframe'; //popup
+	var close = mode == "popup";
+	var options = { mode : mode, popClose : close};
+	$("div.printableArea").printArea( options );*/
 }

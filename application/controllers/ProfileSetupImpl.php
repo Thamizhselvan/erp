@@ -36,7 +36,7 @@
 		'email' => $this->input->post('email'),
 		'website' => $this->input->post('website'),
 		'startup_yr' => $this->input->post('startupYr'),
-		'date_id' => $this->input->post('dateFormat')
+		'date_format_id' => $this->input->post('dateFormat')
 		);
 	   $this->load->model('SettingsDAO');
 	   $status=$this->SettingsDAO->saveCollege($data);
