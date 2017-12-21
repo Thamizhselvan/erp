@@ -19,6 +19,7 @@ function getFeesDetails(){
 }
 
 function paymentAction(){
+	var paymentId = $('#paymentId').val();
 	var admissionNo = $('#admissionNo').val();
 	var dcode = $('#dcode').val();
 	var ccode = $('#ccode').val();
@@ -31,7 +32,7 @@ function paymentAction(){
 	var option=$('#option').val();
 	
 	var dataStr="admissionNo="+admissionNo+"&sem="+sem+"&ccode="+ccode+"&dcode="+dcode+"&academicYear="+academicYear;
-	dataStr+="&totAmount="+totAmount+"&amountPay="+amountPay+"&balAmount="+balAmount+"&dueDt="+dueDt+"&option="+option;
+	dataStr+="&totAmount="+totAmount+"&amountPay="+amountPay+"&balAmount="+balAmount+"&dueDt="+dueDt+"&option="+option+"&paymentId="+paymentId;
 	var status = validatePaymentForm(admissionNo,sem,amountPay,balAmount,dueDt);
 	if(status == true){
 		
@@ -262,16 +263,10 @@ function clearFields(){
 	//$('#feespayment').reset();
 }
 function printfees() {
-	//$("#printfees").attr('target' ,'_blank');
-    var printContents = document.getElementById('printableArea').innerHTML;
+    var printContents = document.getElementById('printArea').innerHTML;
     var originalContents = document.body.innerHTML;
     document.body.innerHTML = printContents;
     window.print();
     document.body.innerHTML = originalContents;
 	
-
-	/*var mode = 'iframe'; //popup
-	var close = mode == "popup";
-	var options = { mode : mode, popClose : close};
-	$("div.printableArea").printArea( options );*/
 }
