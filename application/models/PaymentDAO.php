@@ -6,7 +6,7 @@
       }
 	  
 	  public function savePayment(){
-	    
+	    $paymentId = $this->input->post('paymentId'); 
 		$admissionNo=$this->input->post('admissionNo'); 
 	    $dcode=$this->input->post('dcode'); 
 		$ccode=$this->input->post('ccode'); 
@@ -17,9 +17,9 @@
 		$balAmount=$this->input->post('balAmount'); 
 		$dueDt=$this->input->post('dueDt'); 
 		$USER_ID = SYSTEM_USER;
-	    
-	    $sql = "INSERT INTO tbl_feespaid(admission_no,dcode,ccode,sem,academic_year,tot_amount,amount_paid,bal_amount,payment_dt,due_dt,created_by) 
-				VALUES ( ".$this->db->escape($admissionNo).",".$this->db->escape($dcode).",".$this->db->escape($ccode).",".$this->db->escape($sem).",
+		
+	    $sql = "INSERT INTO tbl_feespaid(payment_id,admission_no,dcode,ccode,sem,academic_year,tot_amount,amount_paid,bal_amount,payment_dt,due_dt,created_by) 
+				VALUES ( ".$this->db->escape($paymentId).",".$this->db->escape($admissionNo).",".$this->db->escape($dcode).",".$this->db->escape($ccode).",".$this->db->escape($sem).",
 				".$this->db->escape($academicYear).",".$this->db->escape($totAmount).",".$this->db->escape($amountPay).",".$this->db->escape($balAmount).",
 				".$this->db->escape(date("Y/m/d")).",".$this->db->escape($dueDt).",".$this->db->escape($USER_ID).")";
 	    $this->db->query($sql);
@@ -78,6 +78,45 @@
 		$this->db->from('admission'); 
 		$query = $this->db->get();
 		return $query->result();
+	  }
+	  public function getFeesPaidDetails($paymentId){
+		$query = $this->db->query("SELECT sname, cname, dname, f.sem,f.academic_year,f.tot_amount, f.amount_paid, f.bal_amount, due_dt
+									FROM tbl_feespaid f
+									LEFT JOIN admission a ON a.admission_no = f.admission_no
+									LEFT JOIN mst_department d ON d.dcode = f.dcode
+									LEFT JOIN mst_course c ON c.dcode = f.dcode
+									AND c.ccode = f.ccode
+									WHERE payment_id =".$this->db->escape($paymentId)." ");
+		log_message('info', 'getFeesPaidDetails called');
+		$resultArr=array();
+		foreach ($query->result_array() as $row)
+		{
+			$resultArr["dname"] = $row['dname'];
+			$resultArr["cname"] = $row['cname'];
+			$resultArr["sem"] 	= $row['sem'];
+			$resultArr["academicYear"] = $row['academic_year'];
+			$resultArr["sname"]=$row['sname'];
+			$resultArr["tot_amount"]=$row['tot_amount'];
+			$resultArr["amount_paid"]=$row['amount_paid'];
+			$resultArr["bal_amount"]=$row['bal_amount'];
+			$resultArr["due_dt"]=$row['due_dt'];
+		}
+		return $resultArr;  
+	  }
+	  public function getFeesParticulars($paymentId){
+		$query = $this->db->query("select particulars,amount from tbl_fees_particulars
+									where fees_code=(select fees_code from tbl_feespaid fp
+									left join tbl_feesmaster fm on fm.dcode=fp.dcode and fm.ccode=fp.ccode and fm.sem=fp.sem and fm.academic_year=fp.academic_year
+									where payment_id=".$this->db->escape($paymentId).")");
+		log_message('info', 'getFeesParticulars called');
+		$resultArr=array();
+		foreach ($query->result_array() as $row)
+		{
+			$particulars = $row['particulars']; 
+			$amount = $row['amount'];
+			$resultArr[$particulars] = $amount;
+		}
+		return $resultArr;  
 	  }
 	  public function getStudentDetailsByAdmissionNo($admissionNo){
 	    $query = $this->db->query("select a.sname,a.email,a.dcode,d.dname,a.ccode,c.cname,c.sem,a.academic_year from admission a
@@ -206,6 +245,19 @@
 		//echo $this->db->last_query()."<br/>";
         return $query->result_array();
    	}
+   
+   public function generatePaymentId(){
+	    $query = $this->db->query('SELECT IFNULL(max(payment_id),0) as payment_id FROM tbl_feespaid');
+		$row = $query->row();
+		$paymentId = $row->payment_id;
+		if($paymentId == 0){
+			$paymentId="100";
+		}
+		else{
+			$paymentId = $paymentId + 1;
+		}
+		return $paymentId;
+   }
    
    } 
 ?>
