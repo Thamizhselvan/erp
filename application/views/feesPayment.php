@@ -71,6 +71,8 @@
 			 <div class="form-group">
                     <label >Balance Amount</label>
                     <div><input class="form-control"  id="balAmount" name="balAmount" type="text" readonly></div>
+					
+					<input class="form-control"  id="paymentId" name="paymentId" type="hidden" value="<?php echo $paymentId?>">
              <!-- <p class="help-block">Help text here.</p> -->
              </div>
         </div>
@@ -92,8 +94,8 @@
 						<!--<input type="submit" class="btn btn-info form-control" value="submit" id="save">-->
 					</div>
 					<div class="col-md-3 col-sm-3 col-xs-12">
-						<input type="button" class="btn btn-info form-control" value="Print" id="print" onclick="printfees()" disabled="disabled">
-						<!--<a href="paymentreciept" class="btn btn-info form-control" target="_blank" id="printfees">Print</a>-->
+						<!--<input type="button" class="btn btn-info form-control" value="Print" id="print" onclick="printfees()" disabled="disabled">-->
+						<a href="paymentreciept?id=<?php echo $paymentId?>" class="btn btn-info form-control" target="_blank" id="printfees">Print</a>
 					</div>
 					<div class="col-md-3 col-sm-3 col-xs-12">
 						<input type="button" value="send" class="btn btn-info form-control" id="send" onclick="sendMail(this)" disabled="disabled">

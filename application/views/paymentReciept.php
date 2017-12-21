@@ -16,34 +16,34 @@
                         </div>
                         <div class="panel-body">
                             <form role="form">
-                               <div class="panel panel-danger" id="printableArea">
+                               <div class="panel panel-danger" id="printArea">
 								
 								<div class="col-md-6">
 								 <div class="form-group">
-										<label >Student Name:<span id="sname"></span></label>
+										<label >Student Name:<span id="sname"><?php echo $payment['sname']?></span></label>
 								 </div>
 								</div>
 								<div class="col-md-6">
 								 <div class="form-group">
-										<label >Course:<span id="course"></span></label>
+										<label >Course:<span id="course"><?php echo $payment['cname']?></span></label>
 										
 								 </div>
 								</div>
 								<div class="col-md-6">
 								 <div class="form-group">
-										<label >Department:<span id="dept"></span></label>
+										<label >Department:<span id="dept"><?php echo $payment['dname']?></span></label>
 										
 								 </div>
 								</div>
 								<div class="col-md-6">
 								 <div class="form-group">
-										<label >Semester:<span id="semester"></span></label>
+										<label >Semester:<span id="semester"><?php echo $payment['sem']?></span></label>
 										
 								 </div>
 								</div>
 								<div class="col-md-6">
 								 <div class="form-group">
-										<label >Due Date:<span id="dueDate"></span></label>
+										<label >Due Date:<span id="dueDate"><?php echo $payment['due_dt']?></span></label>
 										
 								 </div>
 								</div>
@@ -58,25 +58,23 @@
 												</tr>
 											</thead>
 											<tbody>
+												<?php $count=1; 
+												foreach($particulars as $x => $x_value) {?>
+													<tr>
+														<th><?php echo $count ?></th>
+														<th><?php echo $x ?></th>
+														<th><?php echo $x_value ?></th>
+														
+													</tr>
+												<?php $count++; } ?>
 											</tbody>
 										</table>
 									</div>
 								</div>
 							</div>                 
 		   <div class="col-md-6">  
-			   <div class="form-group"></div>                                                                               
+			   <div class="form-group"><input type="button" class="btn btn-info form-control" value="Print" id="print" onclick="printfees()"></div>                                                                               
 		   </div>
-			  <!--<div class="col-md-12 col-sm-12 col-xs-12">
-						<input class="btn btn-info form-control" type="hidden" name="option" id="option" value="save">
-					<div class="col-md-3 col-sm-3 col-xs-12"></div>
-					<div class="col-md-3 col-sm-3 col-xs-12">
-						<input type="button" class="btn btn-info form-control" value="Print" id="print" onclick="payment(this)">
-					</div>
-					<div class="col-md-3 col-sm-3 col-xs-12">
-						<input type="button" value="send" class="btn btn-info form-control" id="send" onclick="sendMail(this)">
-					</div>
-					<div class="col-md-3 col-sm-3 col-xs-12"></div>
-			   </div>-->
 			</form>
         </div>
       </div>
@@ -84,8 +82,3 @@
 	</div>
    </div>
 </div>
-<script>
-$(document).ready(function() {
-     alert('calleddd3232');
-})
-</script>
