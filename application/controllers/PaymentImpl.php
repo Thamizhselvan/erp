@@ -8,6 +8,7 @@
 		$this->load->view('dashboard');
 		$this->load->model('PaymentDAO');
 		$data['stuList'] = $this->PaymentDAO->getAllStudentByAdmissionNo();
+		$data['paymentId'] = $this->PaymentDAO->generatePaymentId();
 		$this->load->view('feesPayment',$data);
 		$this->load->view('footer');
 		 
