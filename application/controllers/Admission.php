@@ -10,6 +10,7 @@ class Admission extends CI_Controller
 		$this->load->model('admission_model');
     	$this->load->library('session');
         $this->load->helper('admission');
+        $this->load->helper('date');
 	}
 	public function new(){		
 	    $data['title'] = "Admission Details";

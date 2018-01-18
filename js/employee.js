@@ -140,6 +140,7 @@ function editEmployee(empId){
 	alert('called'+empId);
 	window.location="../employee?empId="+empId;
 }
+
 $(window).on('load', function () {
   //alert("Window Loaded");
   

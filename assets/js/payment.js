@@ -198,6 +198,7 @@ function getFeesDetailsBySemester(){
 						data:dataStr,
 						success: function(res){
 							var data = $.parseJSON(res);
+							console.log(data); 
 							if(data.amountPay!=0 && data.dueDt!=null){
 								var balAmount=parseFloat(sum)-parseFloat(data.amountPay);
 								$('#balAmount').val(balAmount);
