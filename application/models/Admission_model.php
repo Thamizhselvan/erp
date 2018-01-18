@@ -45,7 +45,10 @@ class Admission_model extends CI_Model {
 
 	    $this->db->insert('std_details', $data);
 	    $insert_id = $this->db->insert_id();
-	    $this->session->unset_userdata('admission_id');
+	    if($insert_id){
+	    	$this->updateStatus('personal_status');
+	    }
+	    //$this->session->unset_userdata('admission_id');
    		return  $insert_id;
 
 	}
@@ -84,7 +87,10 @@ class Admission_model extends CI_Model {
 	    foreach($data as $address){
 	    	
 	    	 $this->db->insert('std_address_details', $address);	
-	    }   	    
+	    } 
+
+    	$this->updateStatus('address_status');
+	    
 	    return true;	    
 
 	}
@@ -103,6 +109,9 @@ class Admission_model extends CI_Model {
 
 	    $this->db->insert('std_other_details', $data);
 	    $insert_id = $this->db->insert_id();
+	    if($insert_id){
+	    	$this->updateStatus('other_status');
+	    }
 		$this->session->unset_userdata('std_id');   	
 		return  $insert_id;
 
@@ -124,7 +133,10 @@ class Admission_model extends CI_Model {
 	    );
 
 	    $this->db->insert('std_guardian_details', $data);
-	    $insert_id = $this->db->insert_id();		   	
+	    $insert_id = $this->db->insert_id();
+	    if($insert_id){
+	    	$this->updateStatus('gudardian_status');
+	    }		   	
 		return  $insert_id;
 
 	}
@@ -143,11 +155,53 @@ class Admission_model extends CI_Model {
 	    );
 
 	    $this->db->insert('std_education_details', $data);
-	    $insert_id = $this->db->insert_id();		   	
+	    $insert_id = $this->db->insert_id();
+	    if($insert_id){
+	    	$this->updateStatus('education_status');
+	    }
+	    		   	
 		return  $insert_id;
 
 	}
 	public function currentDate(){
 		return date('Y-m-d H:i:s');
+	}
+	public function getAdmissionList(){
+		$this->db->select("admission_id,admission_no,course,department,status"); 
+	    $this->db->from('admission_details'); 
+	    $query = $this->db->get();
+	    return $query->result();
+	}
+	public function getAdmissionById($id){
+
+		$this->session->set_userdata('admission_id', $id);
+		$_admissionDetails = array();
+		$_admissionTable = array('admission_details','std_details','std_address_details','std_education_details','std_guardian_details','std_other_details' );
+		foreach($_admissionTable as $tableName){
+			$this->db->select("*"); 
+		    $this->db->from($tableName); 
+		    $this->db->where('admission_id', $id);
+		    $query = $this->db->get();
+		    $result = $query->result_array();
+		    if(!empty($result)){
+		    	$_admissionDetails[$tableName] = $result[0];	
+		    }
+		    else{
+		    	$_admissionDetails[$tableName] = $result;
+		    }
+		    
+		}
+
+		return $_admissionDetails;
+	}
+	private function updateStatus($field){
+		$_admissionId = '';
+
+		if($this->session->has_userdata('admission_id')){
+			$_admissionId = $this->session->userdata('admission_id');	
+		}		
+		$this->db->set($field,'1');
+		$this->db->where('admission_id', $_admissionId);
+		$this->db->update('admission_details'); 
 	}
 }

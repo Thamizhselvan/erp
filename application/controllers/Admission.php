@@ -11,10 +11,13 @@ class Admission extends CI_Controller
     	$this->load->library('session');
         $this->load->helper('admission');
 	}
-	public function index(){
+	public function new(){		
 	    $data['title'] = "Admission Details";
 		$this->load->view('header',$data);
 		$this->load->view('dashboard');
+		$format = "%Y";	
+		$collegeStaredYear = 2011;
+		
 		 
 		$data['course'] 		= getCourseDetails(1);
 		$data['admission_mode'] = getAdmissionMode();
@@ -28,9 +31,41 @@ class Admission extends CI_Controller
 		$data['category'] 		= getCategory();
 		$data['caste'] 			= getCaste();
 		$data['passoutyear']	= getPassoutYear();
-		$data['options']	= getOptions();
+		$data['options']		= getOptions();
+		$data['acedamicyear']   = getAcedamicYear(@mdate($format),$collegeStaredYear);
 		
 		$this->load->view('admission/new',$data);
+		$this->load->view('footer');
+	}
+	public function edit(){		
+		echo "parameters".$this->uri->segment(3);
+		$data['title'] = "Admission Details";
+		$this->load->view('header',$data);
+		$this->load->view('dashboard');
+		$data = $this->admission_model->getAdmissionById($this->uri->segment(3));
+		$data['course'] 		= getCourseDetails(1);
+		$data['admission_mode'] = getAdmissionMode();
+		$data['department']	 	= getDepartment();
+		$data['courseMedium'] 	= getCourseMedium();
+		$data['title'] 			= getTitle();
+		$data['gender'] 		= getGender();
+		$data['mother_tongue'] 	= getMotherTongue();
+		$data['nationality'] 	= getNationality();
+		$data['religion'] 		= getReligion();
+		$data['category'] 		= getCategory();
+		$data['caste'] 			= getCaste();
+		$data['passoutyear']	= getPassoutYear();
+		$data['options']		= getOptions();
+		$this->load->view('admission/edit',$data);
+		$this->load->view('footer');
+	}
+	public function grid(){
+		$_admissionListCollection = $this->admission_model->getAdmissionList();
+		$data['title'] = "Admission List";
+		$data['admissionList'] = $_admissionListCollection;
+		$this->load->view('header',$data);
+		$this->load->view('dashboard');
+		$this->load->view('admission/grid',$data);
 		$this->load->view('footer');
 	}
 	public function create(){			    		

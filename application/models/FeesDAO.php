@@ -141,6 +141,13 @@
 		//echo $this->db->last_query()."<br/>";
         return $query->result_array();
    	}
+   	public function getAllStudentByAdmissionNo(){
+   		$this->db->select('std.admission_no');
+		$this->db->from('admission_details std');		
+		$query = $this->db->get();
+		return $query->result();
+		
+   	}
    
    } 
 ?>

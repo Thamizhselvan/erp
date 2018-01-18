@@ -1,5 +1,5 @@
 <?php
-public class GenerateIds extends CI_Model{
+class GenerateIds extends CI_Model{
 	
 	public function __construct() { 
          parent::__construct(); 

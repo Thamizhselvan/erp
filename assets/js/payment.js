@@ -127,20 +127,20 @@ function getSemByCourse(){
 			}
 	});
 }
-function getStudentDetailsByAdmissionNo(){
-	
+function getStudentDetailsByAdmissionNo(value){	
 	$.ajax({
 		type:"POST",
 		url:"fees/getStudentDetailsByAdmissionNo",
-		data:"admissionNo="+$('#admissionNo').val(),
+		data:"admissionNo="+value,
 		success: function(res) 
 		{
+			console.log(res);
 			var obj = jQuery.parseJSON(res);
 			$('#dcode').val(obj.dcode);
 			$('#dname').val(obj.dname);
 			$('#ccode').val(obj.ccode);
 			$('#cname').val(obj.cname);
-			$('#academicYear').val(obj.academicYear);
+			$('#academicYear').val(obj.acedamic_year);
 			for(i=1;i<=obj.sem;i++){
 					var opt = $('<option />');
 					opt.val(i);
@@ -201,6 +201,7 @@ function getFeesDetailsBySemester(){
 							if(data.amountPay!=0 && data.dueDt!=null){
 								var balAmount=parseFloat(sum)-parseFloat(data.amountPay);
 								$('#balAmount').val(balAmount);
+								$('#dueDt').val(data.dueDt);
 							}
 							else{
 								$('#balAmount').val(sum);

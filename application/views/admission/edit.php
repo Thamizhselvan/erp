@@ -1,5 +1,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<div id="page-wrapper">
+<div id="page-wrapper" class="admission_details_edit">
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
@@ -23,6 +23,26 @@
 									<div class="admission_details">	
 
 		<?php
+			$nth = '';
+			if(!$admission_details['status']&&!$admission_details['personal_status']){
+				$nth = 2;
+			}
+			else if(!$admission_details['status']&&!$admission_details['address_status']){
+				$nth = 3;
+			}
+			else if(!$admission_details['status']&&!$admission_details['education_status']){
+				$nth = 4;
+			}
+			else if(!$admission_details['status']&&!$admission_details['gudardian_status']){
+				$nth = 5;
+			}
+			else if(!$admission_details['status']&&!$admission_details['other_status']){
+				$nth = 6;
+			}
+			else{
+				$nth = 1;
+			}
+			
 			$attributes = array('id' => 'admission_create','role'=>'form');
 			$attributesinput = array('class' => 'form-control');
 			 echo form_open('admission/create',$attributes); ?>
@@ -30,44 +50,36 @@
 			 <div class="panel-body">
                  <div class="col-md-6">  
 					<div class="form-group">
-						<?php echo form_label('Admission Mode '); ?>			
-					 
-						<?php echo form_dropdown('admissionMode',$admission_mode,set_value('admissionMode'),$attributesinput); ?>						
+						<?php echo form_label('Admission Mode '); ?>								 	
+						<?php echo form_dropdown('admissionMode',$admission_mode,$admission_details['admission_mode'],$attributesinput); ?>						
 				    </div>
                 </div> 
 				<div class="col-md-6">  
 					<div class="form-group">
 						<?php echo form_label('Admission Number '); ?>
 					 
-						<?php echo form_input(array('id' => 'dname', 'class' => 'form-control','name' => 'admissionNo')); ?>
+						<?php echo form_input(array('id' => 'dname', 'class' => 'form-control','name' => 'admissionNo'),$admission_details['admission_no']); ?>
 				    </div>
                 </div> 
 				<div class="col-md-6">  
 					<div class="form-group">
 						<?php echo form_label('Course :'); ?>
 					 
-						<?php echo form_dropdown('course',$course,set_value('course'),$attributesinput); ?>		
+						<?php echo form_dropdown('course',$course,$admission_details['course'],$attributesinput); ?>		
 					</div>
                 </div> 
 				<div class="col-md-6">  
 					<div class="form-group">
 						<?php echo form_label('Department :'); ?>
 				
-						<?php echo form_dropdown('department',$department,set_value('department'),$attributesinput); ?>		
+						<?php echo form_dropdown('department',$department,$admission_details['department'],$attributesinput); ?>		
 					</div>
                 </div> 
 				<div class="col-md-6">  
 					<div class="form-group">
 						<?php echo form_label('Course Medium :'); ?>			
 					
-						<?php echo form_dropdown('courseMedium',$courseMedium,set_value('courseMedium'),$attributesinput); ?>		
-					</div>
-                </div> 
-                <div class="col-md-6">  
-					<div class="form-group">
-						<?php echo form_label('Acedamic Year :'); ?>			
-					
-						<?php echo form_dropdown('acedamicyear',$acedamicyear,set_value('courseMedium'),$attributesinput); ?>		
+						<?php echo form_dropdown('courseMedium',$courseMedium,$admission_details['medium'],$attributesinput); ?>		
 					</div>
                 </div> 
                 <div class="col-md-6">  </div>
@@ -655,7 +667,24 @@
 
  
 <script type="text/javascript">
-$(document).ready(function(){
+$(document).ready(function(){	
+	var childValue = "<?php echo $nth;?>";
+
+	$(".admission_details_edit .steps ul  li").removeAttr('aria-selected');
+	$(".admission_details_edit .steps ul  li.first").removeClass('current').addClass('done');
+	$(".admission_details_edit .steps ul  li:nth-child(<?php echo $nth;?>)").removeClass('disabled').addClass('current');	
+	$(".admission_details_edit .steps ul  li:nth-child(<?php echo $nth;?>)").attr('aria-selected','true');
+	$(".admission_details_edit .steps ul  li:nth-child(<?php echo $nth;?>)").attr('aria-disabled','false');
+	$(".admission_details_edit .content section").attr('aria-hidden','true').css('display','none').removeClass('current');
+	$(".admission_details_edit .content #wizard-p-<?php echo $nth-1;?>").addClass('current').attr('aria-hidden','false').css({'display':'block','left':'0px'});
+
+	for (i = 0; i < childValue-1; i++) { 
+	    $(".admission_details_edit .content #wizard-p-"+i).css('left','-851px');
+	}
+	$(".admission_details_edit .content .title").removeClass('current');
+	$(".admission_details_edit .content #wizard-h-<?php echo $nth-1;?>").addClass('current');
+	
+	//$(".admission_details_edit .content  section:nth-child(<?php echo $nth;?>").removeClass('current').addClass('current').attr('aria-hidden','false').css({'display':'block','left':'0px'});
     $("form#admission_create").submit(function(event) {
    	    var form = $(this);	 
    	    console.log(form.serialize());
@@ -807,6 +836,7 @@ $(document).ready(function(){
 	 	$('#pmt_email').val($('#tmp_email').val());
     }
 });
+
 </script>
 <!--<style>
 .admission_details, .education_details {

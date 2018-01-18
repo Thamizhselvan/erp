@@ -74,8 +74,8 @@
 	  }
 	  public function getAllStudentByAdmissionNo(){
 		log_message('info', 'getAllStudentByAdmissionNo called');
-		$this->db->select("admission_no,sname");
-		$this->db->from('admission'); 
+		$this->db->select("admission_no");
+		$this->db->from('admission_details'); 
 		$query = $this->db->get();
 		return $query->result();
 	  }
@@ -119,22 +119,24 @@
 		return $resultArr;  
 	  }
 	  public function getStudentDetailsByAdmissionNo($admissionNo){
-	    $query = $this->db->query("select a.sname,a.email,a.dcode,d.dname,a.ccode,c.cname,c.sem,a.academic_year from admission a
-								left join mst_department d on d.dcode=a.dcode
-								left join mst_course c on c.ccode=a.ccode and c.dcode=a.dcode
-								where a.admission_no=".$this->db->escape($admissionNo)." ");
+	    $query = $this->db->query("select d.dcode,d.dname,c.ccode,c.cname,c.sem,a.acedamic_year,a.semester from admission_details a
+								left join mst_department d on d.dcode=a.department
+								left join mst_course c on c.ccode=a.course and c.dcode=a.department
+								where a.admission_no=".$this->db->escape($admissionNo)."");
 		log_message('info', 'getStudentDetailsByAdmissionNo called');
+		
 		$resultArr=array();
 		foreach ($query->result_array() as $row)
 		{
+			
 			$resultArr["dcode"] = $row['dcode'];
 			$resultArr["dname"] = $row['dname'];
 			$resultArr["ccode"] = $row['ccode'];
 			$resultArr["cname"] = $row['cname'];
-			$resultArr["sem"] 	= $row['sem'];
-			$resultArr["academicYear"] = $row['academic_year'];
-			$resultArr["sname"]=$row['sname'];
-			$resultArr["email"]=$row['email'];
+			$resultArr["sem"] 	= $row['semester'];
+			$resultArr["acedamic_year"] = $row['acedamic_year'];
+			// /$resultArr["sname"]=$row['sname'];
+			//$resultArr["email"]=$row['email'];
 		}
 		return $resultArr;
 	  }

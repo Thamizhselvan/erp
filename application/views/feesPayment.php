@@ -20,10 +20,11 @@
                                <div class="col-md-6">  
 								   <div class="form-group">
                                             <label >Student Admission No.</label>
-                                             <div ><select id="admissionNo" name="admissionNo" class="form-control"  onchange="getStudentDetailsByAdmissionNo()">
+                                             <div ><select id="admissionNo" class="form-control"  onchange="getStudentDetailsByAdmissionNo(this.value)">
+
 													<option value="0">---New---</option>
 														<?php foreach($stuList as $count): ?>
-													<option value="<?php echo $count->admission_no; ?>"><?php echo $count->sname; ?></option>
+													<option value="<?php echo $count->admission_no; ?>"><?php echo $count->admission_no; ?></option>
 														<?php endforeach; ?> 
 											</select></div>
                                            

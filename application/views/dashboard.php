@@ -37,10 +37,10 @@
 
 
                     <li>
-                        <a class="active-menu" href="<?php echo site_url('dashboard');?>"><i class="fa fa-dashboard "></i>Dashboard</a>
+                        <a class="active-menu" href="<?php echo base_url('dashboard');?>"><i class="fa fa-dashboard "></i>Dashboard</a>
                     </li>
                     <li>
-                        <a href="admission"><i class="fa fa-desktop "></i>Admission </a>
+                        <a href="<?php echo base_url('admission'); ?>"><i class="fa fa-desktop "></i>Admission </a>
                     </li>
                     <li>
                         <a href="studentDashboard"><i class="fa fa-desktop "></i>Student Details </a>

@@ -17,6 +17,7 @@
 		$this->load->view('dashboard');
 		$this->load->model('FeesDAO');
 		$data['stuList'] = $this->FeesDAO->getAllStudentByAdmissionNo();
+		
 		$this->load->view('feesPayment',$data);
 		$this->load->view('footer');
       }
@@ -189,7 +190,7 @@
 // 	  }
 	  public function currentDate(){
     		return date('Y-m-d H:i:s');
-    	}
+    	}    	
    } 
    
 ?>
